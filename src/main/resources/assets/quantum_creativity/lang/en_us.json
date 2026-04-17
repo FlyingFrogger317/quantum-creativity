@@ -1,0 +1,14 @@
+{
+  "block.quantum_creativity.quantizer": "Quantizer",
+  "item.quantum_creativity.quantum_sword": "Quantum drowS",
+  "item.quantum_creativity.quantum_pickaxe": "Quantum exakciP",
+  "item.quantum_creativity.quantum_axe": "Quantum exA",
+  "item.quantum_creativity.quantum_shovel": "Quantum lovehS",
+  "item.quantum_creativity.tesseract": "Tesseract",
+  "item.quantum_creativity.blank_smithing_template": "Blank Smithing Template",
+  "item.quantum_creativity.incomplete_quantum_mechanism": "Incomplete Quantum Mechanism",
+  "item.quantum_creativity.incomplete_blank_smithing_template": "Incomplete Blank Smithing Template",
+  "itemGroup.quantum_creativity.quantum": "Create: Quantum Creativity",
+  "recipe.quantum_creativity.quantizing": "Quantizing",
+  "quantum_creativity.text.random_output": "Chosen randomly."
+}

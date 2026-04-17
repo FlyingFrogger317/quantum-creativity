@@ -1,0 +1,254 @@
+{
+  "type": "create:sequenced_assembly",
+  "ingredient" : {
+    "item":"create:brass_casing"
+  },
+  "transitionalItem" : {
+    "item": "quantum_creativity:incomplete_schrodingers_box"
+  },
+  "sequence": [
+    {
+      "type": "create:cutting",
+      "ingredients":[
+        {
+          "item":"quantum_creativity:incomplete_schrodingers_box"
+        }
+      ],
+      "results": [
+        {
+          "item": "quantum_creativity:incomplete_schrodingers_box"
+        }
+      ],
+      "processingTime": 50
+    },
+    {
+      "type": "create:deploying",
+      "ingredients": [
+        {
+          "item": "quantum_creativity:incomplete_schrodingers_box"
+        },
+        {
+          "item": "create:brass_sheet"
+        }
+      ],
+      "results": [
+        {
+          "item": "quantum_creativity:incomplete_schrodingers_box"
+        }
+      ]
+    },
+    {
+      "type": "create:deploying",
+      "ingredients": [
+        {
+          "item": "quantum_creativity:incomplete_schrodingers_box"
+        },
+        {
+          "item": "minecraft:netherite_scrap"
+        }
+      ],
+      "results": [
+        {
+          "item": "quantum_creativity:incomplete_schrodingers_box"
+        }
+      ]
+    },
+    {
+      "type": "create:deploying",
+      "ingredients": [
+        {
+          "item": "quantum_creativity:incomplete_schrodingers_box"
+        },
+        {
+          "item": "create:precision_mechanism"
+        }
+      ],
+      "results": [
+        {
+          "item": "quantum_creativity:incomplete_schrodingers_box"
+        }
+      ]
+    },
+    {
+      "type": "create:deploying",
+      "ingredients": [
+        {
+          "item": "quantum_creativity:incomplete_schrodingers_box"
+        },
+        {
+          "item": "create:precision_mechanism"
+        }
+      ],
+      "results": [
+        {
+          "item": "quantum_creativity:incomplete_schrodingers_box"
+        }
+      ]
+    },
+    {
+      "type": "create:deploying",
+      "ingredients": [
+        {
+          "item": "quantum_creativity:incomplete_schrodingers_box"
+        },
+        {
+          "item": "create:electron_tube"
+        }
+      ],
+      "results": [
+        {
+          "item": "quantum_creativity:incomplete_schrodingers_box"
+        }
+      ]
+    },
+    {
+      "type": "create:deploying",
+      "ingredients": [
+        {
+          "item": "quantum_creativity:incomplete_schrodingers_box"
+        },
+        {
+          "item": "create:electron_tube"
+        }
+      ],
+      "results": [
+        {
+          "item": "quantum_creativity:incomplete_schrodingers_box"
+        }
+      ]
+    },
+    {
+      "type": "create:deploying",
+      "ingredients": [
+        {
+          "item": "quantum_creativity:incomplete_schrodingers_box"
+        },
+        {
+          "item": "create:electron_tube"
+        }
+      ],
+      "results": [
+        {
+          "item": "quantum_creativity:incomplete_schrodingers_box"
+        }
+      ]
+    },
+    {
+      "type": "create:deploying",
+      "ingredients": [
+        {
+          "item": "quantum_creativity:incomplete_schrodingers_box"
+        },
+        {
+          "item": "create:electron_tube"
+        }
+      ],
+      "results": [
+        {
+          "item": "quantum_creativity:incomplete_schrodingers_box"
+        }
+      ]
+    },
+    {
+      "type": "create:deploying",
+      "ingredients": [
+        {
+          "item": "quantum_creativity:incomplete_schrodingers_box"
+        },
+        {
+          "item": "create:electron_tube"
+        }
+      ],
+      "results": [
+        {
+          "item": "quantum_creativity:incomplete_schrodingers_box"
+        }
+      ]
+    },
+    {
+      "type": "create:deploying",
+      "ingredients": [
+        {
+          "item": "quantum_creativity:incomplete_schrodingers_box"
+        },
+        {
+          "item": "create:electron_tube"
+        }
+      ],
+      "results": [
+        {
+          "item": "quantum_creativity:incomplete_schrodingers_box"
+        }
+      ]
+    },
+    {
+      "type": "create:deploying",
+      "ingredients": [
+        {
+          "item": "quantum_creativity:incomplete_schrodingers_box"
+        },
+        {
+          "item": "create:electron_tube"
+        }
+      ],
+      "results": [
+        {
+          "item": "quantum_creativity:incomplete_schrodingers_box"
+        }
+      ]
+    },
+    {
+      "type": "create:deploying",
+      "ingredients": [
+        {
+          "item": "quantum_creativity:incomplete_schrodingers_box"
+        },
+        {
+          "item": "create:electron_tube"
+        }
+      ],
+      "results": [
+        {
+          "item": "quantum_creativity:incomplete_schrodingers_box"
+        }
+      ]
+    },
+    {
+      "type": "create:deploying",
+      "ingredients": [
+        {
+          "item": "quantum_creativity:incomplete_schrodingers_box"
+        },
+        {
+          "item": "create:brass_sheet"
+        }
+      ],
+      "results": [
+        {
+          "item": "quantum_creativity:incomplete_schrodingers_box"
+        }
+      ]
+    },
+    {
+      "type": "create:pressing",
+      "ingredients": [
+        {
+          "item": "quantum_creativity:incomplete_schrodingers_box"
+        }
+      ],
+      "results": [
+        {
+          "item": "quantum_creativity:incomplete_schrodingers_box"
+        }
+      ]
+    }
+  ],
+  "results": [
+    {
+      "item": "quantum_creativity:unobserved_schrodingers_box",
+      "count": 16,
+      "chance": 1.0
+    }
+  ],
+  "loops": 4
+}

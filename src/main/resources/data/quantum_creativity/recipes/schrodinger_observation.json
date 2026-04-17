@@ -1,0 +1,32 @@
+{
+  "type": "create:sequenced_assembly",
+  "ingredient" : {
+    "item":"quantum_creativity:observable_schrodingers_box"
+  },
+  "transitionalItem" : {
+    "item": "quantum_creativity:semiobserved_schrodingers_box"
+  },
+  "sequence": [
+
+    {
+      "type": "create:pressing",
+      "ingredients": [
+        {
+          "item": "quantum_creativity:semiobserved_schrodingers_box"
+        }
+      ],
+      "results": [
+        {
+          "item": "quantum_creativity:semiobserved_schrodingers_box"
+        }
+      ]
+    }
+  ],
+  "results": [
+    {
+      "item": "quantum_creativity:observed_schrodingers_box",
+      "chance": 1.0
+    }
+  ],
+  "loops": 100
+}

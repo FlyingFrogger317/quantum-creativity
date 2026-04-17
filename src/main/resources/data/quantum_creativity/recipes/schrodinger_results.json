@@ -1,0 +1,16 @@
+{
+  "type": "quantum_creativity:quantizing",
+  "input" : {
+    "item":"quantum_creativity:observed_schrodingers_box"
+  },
+  "outputs": [
+    { "item": "quantum_creativity:improvised_aquatic_trinket"},
+    { "item": "quantum_creativity:improvised_bottle_o_energy"},
+    { "item": "quantum_creativity:improvised_crystallized_experience"},
+    { "item": "quantum_creativity:improvised_hardened_metal"},
+    { "item": "quantum_creativity:improvised_quantized_magnet"},
+    { "item": "quantum_creativity:improvised_quantum_bubble"},
+    { "item": "quantum_creativity:improvised_quantum_casing"},
+    { "item": "quantum_creativity:improvised_quantum_storage_component"}
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    { "item": "quantum_creativity:improvised_quantized_magnet" },
+    { "item": "quantum_creativity:improvised_quantized_magnet" },
+    { "item": "quantum_creativity:improvised_quantized_magnet" }
+  ],
+  "result": {
+    "item": "quantum_creativity:quantized_magnet",
+    "count": 2
+  }
+}

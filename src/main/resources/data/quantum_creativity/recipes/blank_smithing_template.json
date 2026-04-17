@@ -1,0 +1,143 @@
+{
+  "type": "create:sequenced_assembly",
+  "ingredient": {
+    "item": "create:sturdy_sheet"
+  },
+  "transitionalItem": {
+    "item": "quantum_creativity:incomplete_blank_smithing_template"
+  },
+  "sequence": [
+    {
+      "type": "create:cutting",
+      "ingredients": [
+        {
+          "item": "quantum_creativity:incomplete_blank_smithing_template"
+        }
+      ],
+      "results": [
+        {
+          "item": "quantum_creativity:incomplete_blank_smithing_template"
+        }
+      ],
+      "processingTime": 50
+    },
+    {
+      "type": "create:deploying",
+      "ingredients": [
+        {
+          "item": "quantum_creativity:incomplete_blank_smithing_template"
+        },
+        {
+          "item": "minecraft:diamond"
+        }
+      ],
+      "results": [
+        {
+          "item": "quantum_creativity:incomplete_blank_smithing_template"
+        }
+      ]
+    },
+    {
+      "type": "create:deploying",
+      "ingredients": [
+        {
+          "item": "quantum_creativity:incomplete_blank_smithing_template"
+        },
+        {
+          "item": "minecraft:diamond"
+        }
+      ],
+      "results": [
+        {
+          "item": "quantum_creativity:incomplete_blank_smithing_template"
+        }
+      ]
+    },
+    {
+      "type": "create:deploying",
+      "ingredients": [
+        {
+          "item": "quantum_creativity:incomplete_blank_smithing_template"
+        },
+        {
+          "item": "minecraft:diamond"
+        }
+      ],
+      "results": [
+        {
+          "item": "quantum_creativity:incomplete_blank_smithing_template"
+        }
+      ]
+    },
+    {
+      "type": "create:deploying",
+      "ingredients": [
+        {
+          "item": "quantum_creativity:incomplete_blank_smithing_template"
+        },
+        {
+          "item": "minecraft:diamond"
+        }
+      ],
+      "results": [
+        {
+          "item": "quantum_creativity:incomplete_blank_smithing_template"
+        }
+      ]
+    },
+    {
+      "type": "create:filling",
+      "ingredients": [
+        {
+          "item": "quantum_creativity:incomplete_blank_smithing_template"
+        },
+        {
+          "fluid": "minecraft:lava",
+          "amount": 1000
+        }
+      ],
+      "results": [
+        {
+          "item": "quantum_creativity:incomplete_blank_smithing_template"
+        }
+      ]
+    },
+    {
+      "type": "create:deploying",
+      "ingredients": [
+        {
+          "item": "quantum_creativity:incomplete_blank_smithing_template"
+        },
+        {
+          "item": "create:iron_sheet"
+        }
+      ],
+      "results": [
+        {
+          "item": "quantum_creativity:incomplete_blank_smithing_template"
+        }
+      ]
+    },
+    {
+      "type": "create:pressing",
+      "ingredients": [
+        {
+          "item": "quantum_creativity:incomplete_blank_smithing_template"
+        }
+      ],
+      "results": [
+        {
+          "item": "quantum_creativity:incomplete_blank_smithing_template"
+        }
+      ]
+    }
+  ],
+  "results": [
+    {
+      "item": "quantum_creativity:blank_smithing_template",
+      "count": 1,
+      "chance": 1.0
+    }
+  ],
+  "loops": 1
+}

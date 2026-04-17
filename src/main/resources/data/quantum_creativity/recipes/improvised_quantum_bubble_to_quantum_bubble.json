@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    { "item": "quantum_creativity:improvised_quantum_bubble" },
+    { "item": "quantum_creativity:improvised_quantum_bubble" },
+    { "item": "quantum_creativity:improvised_quantum_bubble" }
+  ],
+  "result": {
+    "item": "quantum_creativity:quantum_bubble",
+    "count": 2
+  }
+}
