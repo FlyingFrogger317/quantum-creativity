@@ -1,5 +1,5 @@
 {
-  "parent": "quantum_creativity:quantum/pristine_production",
+  "parent": "quantum_creativity:quantum/machinery_of_existance",
   "display": {
     "icon": {
       "item": "quantum_creativity:quantum_ingot"
@@ -17,9 +17,15 @@
   },
   "criteria": {
     "crafted": {
-      "trigger": "minecraft:recipe_unlocked",
+      "trigger": "minecraft:inventory_changed",
       "conditions": {
-        "recipe": "quantum_creativity:quantum_ingot_casting"
+        "items": [
+          {
+            "items": [
+              "quantum_creativity:quantum_ingot"
+            ]
+          }
+        ]
       }
     }
   },

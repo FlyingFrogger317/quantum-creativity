@@ -17,9 +17,15 @@
   },
   "criteria": {
     "crafted": {
-      "trigger": "minecraft:recipe_unlocked",
+      "trigger": "minecraft:inventory_changed",
       "conditions": {
-        "recipe": "quantum_creativity:quantum_upgrade_template"
+        "items": [
+          {
+            "items": [
+              "quantum_creativity:quantum_upgrade_template"
+            ]
+          }
+        ]
       }
     }
   }
