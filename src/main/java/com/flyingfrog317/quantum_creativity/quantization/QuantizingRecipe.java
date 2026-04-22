@@ -1,32 +1,24 @@
 package com.flyingfrog317.quantum_creativity.quantization;
 
-import com.flyingfrog317.quantum_creativity.QuantumCreativity;
 import net.minecraft.core.NonNullList;
 import net.minecraft.core.RegistryAccess;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.util.RandomSource;
 import net.minecraft.world.SimpleContainer;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.item.crafting.Recipe;
 import net.minecraft.world.item.crafting.RecipeSerializer;
 import net.minecraft.world.item.crafting.RecipeType;
-import net.minecraft.world.level.ItemLike;
 import net.minecraft.world.level.Level;
-import net.minecraftforge.registries.DeferredRegister;
-import net.minecraftforge.registries.ForgeRegistries;
-import net.minecraftforge.registries.RegistryObject;
-
-import java.util.Arrays;
-import java.util.Collections;
-import java.util.concurrent.ThreadLocalRandom;
-import java.util.stream.Collectors;
+import java.util.stream.Collector;
 
 public class QuantizingRecipe implements Recipe<SimpleContainer> {
     private final ResourceLocation id;
     public final Ingredient inputs;
-    private final NonNullList<ItemStack> outputs;
+    public final NonNullList<Ingredient> outputs;
 
-    public QuantizingRecipe(ResourceLocation id, Ingredient input, NonNullList<ItemStack> outputs) {
+    public QuantizingRecipe(ResourceLocation id, Ingredient input, NonNullList<Ingredient> outputs) {
         this.id = id;
         this.inputs = input;
         this.outputs = outputs;
@@ -40,16 +32,24 @@ public class QuantizingRecipe implements Recipe<SimpleContainer> {
         }
         return false;
     }
-
+    /**
+     * @deprecated Required by the Recipe interface but not supported for this recipe type. Always throws.
+     * Use {@link #resolve(RandomSource)} instead.
+     * @throws UnsupportedOperationException always
+     */
+    @Deprecated
     @Override
     public ItemStack assemble(SimpleContainer simpleContainer, RegistryAccess registryAccess) {
-        if (outputs.size()==1){
-            return outputs.get(0).copy();
-        }
-        int index= ThreadLocalRandom.current().nextInt(outputs.size());
-        return outputs.get(index).copy();
+        throw new UnsupportedOperationException("QuantizingRecipe.assemble() is unsupported, use QuantizingRecipe.resolve(RandomSource) instead");
     }
-
+    public ItemStack resolve(RandomSource source){
+        NonNullList<ItemStack> items=getResultItems();
+        if (items.size()==1){
+            return items.get(0).copy();
+        }
+        int rand=source.nextInt(items.size());//the constructor prevents it from being 0
+        return items.get(rand).copy();
+    }
     @Override
     public boolean canCraftInDimensions(int i, int i1) {
         return true;
@@ -57,10 +57,25 @@ public class QuantizingRecipe implements Recipe<SimpleContainer> {
 
     @Override
     public ItemStack getResultItem(RegistryAccess registryAccess) {
-        return outputs.get(0);
+        return outputs.get(0).getItems()[0];
     }
     public NonNullList<ItemStack> getResultItems(){
-        return outputs;
+        return outputs.stream().map(Ingredient::getItems).collect(Collector.of(
+                NonNullList::create, // supplier
+                (list, array) -> {
+                    if (array != null) {
+                        for (ItemStack stack : array) {
+                            if (stack != null && !stack.isEmpty()) {
+                                list.add(stack);
+                            }
+                        }
+                    }
+                },
+                (left, right) -> {
+                    left.addAll(right);
+                    return left;
+                }
+        ));
     }
     @Override
     public ResourceLocation getId() {

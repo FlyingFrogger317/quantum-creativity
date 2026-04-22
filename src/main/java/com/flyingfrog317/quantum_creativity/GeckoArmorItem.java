@@ -1,30 +1,28 @@
 package com.flyingfrog317.quantum_creativity;
 
 import net.minecraft.client.model.HumanoidModel;
-import net.minecraft.client.renderer.BlockEntityWithoutLevelRenderer;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.LivingEntity;
-import net.minecraft.world.item.*;
+import net.minecraft.world.item.ArmorItem;
+import net.minecraft.world.item.ArmorMaterial;
+import net.minecraft.world.item.ItemStack;
 import net.minecraftforge.client.extensions.common.IClientItemExtensions;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 import software.bernie.geckolib.animatable.GeoItem;
 import software.bernie.geckolib.core.animatable.instance.AnimatableInstanceCache;
 import software.bernie.geckolib.core.animation.AnimatableManager;
-import software.bernie.geckolib.core.animation.Animation;
-import software.bernie.geckolib.core.keyframe.event.data.CustomInstructionKeyframeData;
 import software.bernie.geckolib.model.GeoModel;
 import software.bernie.geckolib.renderer.GeoArmorRenderer;
-import software.bernie.geckolib.renderer.GeoItemRenderer;
 import software.bernie.geckolib.util.GeckoLibUtil;
 
 import java.util.function.Consumer;
 
 public class GeckoArmorItem extends ArmorItem implements GeoItem {
-    private String MODID;
-    private String ITEM_NAME;
+    private final String MODID;
+    private final String ITEM_NAME;
     private final AnimatableInstanceCache cache = GeckoLibUtil.createInstanceCache(this);
 
     public GeckoArmorItem(ArmorMaterial pMaterial, Type pType, Properties pProperties, String modid, String name) {

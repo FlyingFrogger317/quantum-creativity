@@ -1,12 +1,10 @@
 package com.flyingfrog317.quantum_creativity;
 
-import net.minecraft.network.chat.Component;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.world.item.ArmorItem;
 import net.minecraft.world.item.ArmorMaterial;
 import net.minecraft.world.item.crafting.Ingredient;
-
-import java.awt.*;
+import org.jetbrains.annotations.Nullable;
 
 public class QuantumArmorMaterial implements ArmorMaterial {
     @Override
@@ -25,18 +23,18 @@ public class QuantumArmorMaterial implements ArmorMaterial {
     }
 
     @Override
-    public SoundEvent getEquipSound() {
+    public @Nullable SoundEvent getEquipSound() {
         return null;
     }
 
     @Override
-    public Ingredient getRepairIngredient() {
+    public @Nullable Ingredient getRepairIngredient() {
         return null;
     }
 
     @Override
     public String getName() {
-        return "quantum";
+        return QuantumCreativity.asResource("quantum").toString();
     }
 
     @Override

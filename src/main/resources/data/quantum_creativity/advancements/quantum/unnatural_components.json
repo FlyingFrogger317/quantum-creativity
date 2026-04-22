@@ -1,0 +1,30 @@
+{
+  "parent": "quantum_creativity:quantum/synthetic_superposition",
+  "display": {
+    "icon": {
+      "item": "quantum_creativity:damaged_quantized_magnet"
+    },
+    "title": {
+      "translate": "advancement.quantum.unnatural_components.title"
+    },
+    "description": {
+      "translate": "advancement.quantum.unnatural_components.description"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "crafted_tag": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "tag": "quantum_creativity:quantum_mechanism_lowquality_component"
+          }
+        ]
+      }
+    }
+  }
+}

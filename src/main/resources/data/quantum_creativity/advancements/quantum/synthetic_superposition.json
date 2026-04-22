@@ -1,0 +1,26 @@
+{
+  "parent": "quantum_creativity:quantum/into_the_unknown",
+  "display": {
+    "icon": {
+      "item": "quantum_creativity:observed_schrodingers_box"
+    },
+    "title": {
+      "translate": "advancement.quantum.synthetic_superposition.title"
+    },
+    "description": {
+      "translate": "advancement.quantum.synthetic_superposition.description"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "crafted": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "quantum_creativity:observed_schrodingers_box"
+      }
+    }
+  }
+}

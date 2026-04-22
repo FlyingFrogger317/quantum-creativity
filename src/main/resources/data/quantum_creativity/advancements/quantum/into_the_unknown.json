@@ -1,0 +1,26 @@
+{
+  "parent": "quantum_creativity:quantum/root",
+  "display": {
+    "icon": {
+      "item": "quantum_creativity:unobserved_schrodingers_box"
+    },
+    "title": {
+      "translate": "advancement.quantum.into_the_unknown.title"
+    },
+    "description": {
+      "translate": "advancement.quantum.into_the_unknown.description"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "crafted": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "quantum_creativity:unobserved_schrodingers_box"
+      }
+    }
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "parent": "quantum_creativity:quantum/pristine_production",
+  "display": {
+    "icon": {
+      "item": "quantum_creativity:quantum_mechanism"
+    },
+    "title": {
+      "translate": "advancement.quantum.machinery_of_existence.title"
+    },
+    "description": {
+      "translate": "advancement.quantum.machinery_of_existence.description"
+    },
+    "frame": "goal",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "crafted": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "quantum_creativity:quantum_mechanism"
+      }
+    }
+  }
+}

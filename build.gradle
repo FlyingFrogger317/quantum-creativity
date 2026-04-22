@@ -86,6 +86,8 @@ minecraft {
         client {
             // Comma-separated list of namespaces to load gametests from. Empty = all namespaces.
             property 'forge.enabledGameTestNamespaces', mod_id
+            property 'mixin.env.remapRefMap', 'true'
+            property 'mixin.env.refMapRemappingFile', "${projectDir}/build/createSrgToMcp/output.srg"
         }
 
         server {
@@ -147,6 +149,7 @@ dependencies {
      compileOnly fg.deobf("mezz.jei:jei-${minecraft_version}-common-api:${jei_version}")
      compileOnly fg.deobf("mezz.jei:jei-${minecraft_version}-forge-api:${jei_version}")
      runtimeOnly fg.deobf("mezz.jei:jei-${minecraft_version}-forge:${jei_version}")
+    compileOnly fg.deobf("dev.emi:emi-forge:${emi_version}+${minecraft_version}:api")
     runtimeOnly fg.deobf("dev.emi:emi-forge:${emi_version}+${minecraft_version}")
 
     // Example mod dependency using a mod jar from ./libs with a flat dir repository

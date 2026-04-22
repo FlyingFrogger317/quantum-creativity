@@ -1,0 +1,32 @@
+{
+  "parent": "quantum_creativity:quantum/into_the_unknown",
+  "display": {
+    "icon": {
+      "item": "quantum_creativity:quantizer"
+    },
+    "title": {
+      "translate": "advancement.quantum.quantum_collapse.title"
+    },
+    "description": {
+      "translate": "advancement.quantum.quantum_collapse.description"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "crafted": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "quantum_creativity:quantizer"
+            ]
+          }
+        ]
+      }
+    }
+  }
+}

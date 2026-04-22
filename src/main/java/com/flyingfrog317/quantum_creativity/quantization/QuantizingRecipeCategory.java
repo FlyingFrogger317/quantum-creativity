@@ -3,21 +3,16 @@ package com.flyingfrog317.quantum_creativity.quantization;
 import com.flyingfrog317.quantum_creativity.QuantumCreativity;
 import mezz.jei.api.constants.VanillaTypes;
 import mezz.jei.api.gui.builder.IRecipeLayoutBuilder;
-import mezz.jei.api.gui.builder.ITooltipBuilder;
+import mezz.jei.api.gui.builder.IRecipeSlotBuilder;
 import mezz.jei.api.gui.drawable.IDrawable;
-import mezz.jei.api.gui.ingredient.IRecipeSlotRichTooltipCallback;
-import mezz.jei.api.gui.ingredient.IRecipeSlotView;
 import mezz.jei.api.helpers.IGuiHelper;
-import mezz.jei.api.ingredients.IIngredientType;
 import mezz.jei.api.recipe.IFocusGroup;
 import mezz.jei.api.recipe.RecipeType;
 import mezz.jei.api.recipe.category.IRecipeCategory;
 import net.minecraft.ChatFormatting;
 import net.minecraft.core.NonNullList;
 import net.minecraft.network.chat.Component;
-import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
-import net.minecraftforge.items.SlotItemHandler;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
@@ -25,8 +20,8 @@ public class QuantizingRecipeCategory implements IRecipeCategory<QuantizingRecip
     static public final RecipeType<QuantizingRecipe> recipeType=new RecipeType<>(QuantumCreativity.asResource("jei_quantizing"),QuantizingRecipe.class);
     private final IGuiHelper guiHelper;
     private final IDrawable background;
-    private int xOffset=24;
-    private int yOffset=13;
+    private final int xOffset=24;
+    private final int yOffset=13;
     public QuantizingRecipeCategory(IGuiHelper helper){
         this.background = helper.createDrawable(QuantumCreativity.asResource("textures/gui/container/quantizer.png"),xOffset,yOffset,128,128);
         guiHelper=helper;
@@ -45,7 +40,7 @@ public class QuantizingRecipeCategory implements IRecipeCategory<QuantizingRecip
     public @Nullable IDrawable getIcon() {
         return guiHelper.createDrawableItemStack(new ItemStack(QuantizingRegistries.QuantizerItemReg.get()));
     }
-
+    @SuppressWarnings("removal")
     @Override
     public @Nullable IDrawable getBackground() {
         return background;
@@ -69,16 +64,19 @@ public class QuantizingRecipeCategory implements IRecipeCategory<QuantizingRecip
                 {-44, -25},  // Slot 11
                 {-26, -45}   // Slot 12
         };
-        builder.addInputSlot().addIngredient(VanillaTypes.ITEM_STACK,recipe.getInputItem()).setPosition(centerX,centerY);
+        builder.addInputSlot().addIngredients(recipe.inputs).setPosition(centerX,centerY);
         NonNullList<ItemStack> results=recipe.getResultItems();
-        for (int i=0;i<results.size();i++){
-            var offset=offsets[i];
-            builder.addOutputSlot().addIngredient(VanillaTypes.ITEM_STACK, results.get(i)).setPosition(offset[0]+centerX,offset[1]+centerY).addRichTooltipCallback(new IRecipeSlotRichTooltipCallback() {
-                @Override
-                public void onRichTooltip(IRecipeSlotView recipeSlotView, ITooltipBuilder tooltip) {
-                    tooltip.add(Component.translatable("quantum_creativity.text.random_output").withStyle(ChatFormatting.GOLD));
-                }
-            });
+        int items_per_slot= (int) Math.ceil((double)results.size()/12.0);
+        int extra_items_slots= results.size()%12;
+        int index=0;
+        for (int[] offset : offsets) {
+            IRecipeSlotBuilder slot = builder.addOutputSlot(centerX + offset[0], centerY + offset[1]);
+            int slots = ((extra_items_slots--) > 0) ? items_per_slot : items_per_slot - 1;
+            for (int q = 0; q < slots; q++) {
+                slot.addIngredient(VanillaTypes.ITEM_STACK, results.get(index));
+                index++;
+            }
+            slot.addRichTooltipCallback((recipeSlotView, tooltip) -> tooltip.add(Component.translatable("quantum_creativity.text.random_output").withStyle(ChatFormatting.GOLD)));
         }
     }
 }

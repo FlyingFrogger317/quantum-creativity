@@ -5,9 +5,11 @@ import com.flyingfrog317.quantum_creativity.quantization.QuantizingRegistries;
 import com.flyingfrog317.quantum_creativity.tesseract.Tesseract;
 import com.mojang.logging.LogUtils;
 import net.minecraft.ChatFormatting;
-import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.ResourceLocation;
-import net.minecraft.world.item.*;
+import net.minecraft.world.item.ArmorItem;
+import net.minecraft.world.item.Item;
+import net.minecraft.world.item.Rarity;
+import net.minecraft.world.item.Tiers;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraftforge.fluids.FluidType;
@@ -77,6 +79,7 @@ public class QuantumCreativity
                         "quantum_shovel"
                 )
         );
+        registrys.createItem("quantum_hoe",new Item.Properties().stacksTo(1));
         registrys.createRawItem("quantum_helmet",()->new GeckoArmorItem(
                 ARMOR_QUANTUM,
                 ArmorItem.Type.HELMET,
@@ -106,14 +109,14 @@ public class QuantumCreativity
                 "quantum_armor"
         ));
         int quantumComponentStackSize=64;
-        registrys.createItem("improvised_quantum_storage_component", new Item.Properties().stacksTo(quantumComponentStackSize));
-        registrys.createItem("improvised_quantum_bubble", new Item.Properties().stacksTo(quantumComponentStackSize));
-        registrys.createItem("improvised_hardened_metal", new Item.Properties().stacksTo(quantumComponentStackSize));
-        registrys.createItem("improvised_quantized_magnet", new Item.Properties().stacksTo(quantumComponentStackSize));
-        registrys.createItem("improvised_aquatic_trinket", new Item.Properties().stacksTo(quantumComponentStackSize));
-        registrys.createItem("improvised_crystallized_experience", new Item.Properties().stacksTo(quantumComponentStackSize));
-        registrys.createItem("improvised_bottle_o_energy", new Item.Properties().stacksTo(quantumComponentStackSize));
-        registrys.createBlock("improvised_quantum_casing", Block.Properties.of().destroyTime(0.2f), new Item.Properties().stacksTo(quantumComponentStackSize));
+        registrys.createItem("damaged_quantum_storage_component", new Item.Properties().stacksTo(quantumComponentStackSize));
+        registrys.createItem("damaged_quantum_bubble", new Item.Properties().stacksTo(quantumComponentStackSize));
+        registrys.createItem("damaged_hardened_metal", new Item.Properties().stacksTo(quantumComponentStackSize));
+        registrys.createItem("damaged_quantized_magnet", new Item.Properties().stacksTo(quantumComponentStackSize));
+        registrys.createItem("damaged_aquatic_trinket", new Item.Properties().stacksTo(quantumComponentStackSize));
+        registrys.createItem("damaged_crystallized_experience", new Item.Properties().stacksTo(quantumComponentStackSize));
+        registrys.createItem("damaged_bottle_o_energy", new Item.Properties().stacksTo(quantumComponentStackSize));
+        registrys.createBlock("damaged_quantum_casing", Block.Properties.of().destroyTime(0.2f), new Item.Properties().stacksTo(quantumComponentStackSize));
         registrys.createItem("quantum_storage_component",new Item.Properties().stacksTo(quantumComponentStackSize));
         registrys.createItem("quantum_bubble",new Item.Properties().stacksTo(quantumComponentStackSize));
         registrys.createItem("hardened_metal",new Item.Properties().stacksTo(quantumComponentStackSize));
@@ -128,7 +131,9 @@ public class QuantumCreativity
                 FluidType.Properties.create().density(3000).viscosity(6000).temperature(1300)
         );
         registrys.createItem("quantum_ingot", new Item.Properties().stacksTo(64));
+        registrys.createBlock("block_of_quantum_ingot", BlockBehaviour.Properties.of(), new Item.Properties().stacksTo(64));
         registrys.createItem("blank_smithing_template", new Item.Properties().stacksTo(64));
+        registrys.createItem("quantum_upgrade_template", new Item.Properties().stacksTo(64));
         BlockBehaviour.Properties schrodingerBoxProperties = Block.Properties.of().strength(0.5f);
         registrys.createBlock("unobserved_schrodingers_box", schrodingerBoxProperties, new Item.Properties().stacksTo(16));
         registrys.createBlock("observable_schrodingers_box", schrodingerBoxProperties, new Item.Properties().stacksTo(16));
@@ -154,7 +159,6 @@ public class QuantumCreativity
         //transitionals
         registrys.usingCreativeTab("");
         registrys.createItem("incomplete_quantum_mechanism", new Item.Properties().stacksTo(1));
-        registrys.createItem("incomplete_blank_smithing_template", new Item.Properties().stacksTo(1));
         registrys.createBlock("incomplete_schrodingers_box", schrodingerBoxProperties, new Item.Properties().stacksTo(1));
         registrys.createBlock("semiobserved_schrodingers_box", schrodingerBoxProperties, new Item.Properties().stacksTo(1));
         registrys.createItem("quantum_ingot_cast",new Item.Properties().stacksTo(1));
@@ -162,6 +166,7 @@ public class QuantumCreativity
         QuantizingRegistries.register(context);
         LOGGER.info("Mod loading complete");
     }
+
     public static ResourceLocation asResource(String name){
         return ResourceLocation.fromNamespaceAndPath(MODID,name);
     }

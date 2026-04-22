@@ -1,0 +1,58 @@
+{
+  "parent": "quantum_creativity:quantum/quantum_infusion",
+  "display": {
+    "icon": {
+      "item": "quantum_creativity:quantum_chestplate"
+    },
+    "title": {
+      "translate": "advancement.quantum.paradoxical_protection.title"
+    },
+    "description": {
+      "translate": "advancement.quantum.paradoxical_protection.description"
+    },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": true
+  },
+  "criteria": {
+    "helmet": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          { "items": ["quantum_creativity:quantum_helmet"] }
+        ]
+      }
+    },
+    "chestplate": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          { "items": ["quantum_creativity:quantum_chestplate"] }
+        ]
+      }
+    },
+    "leggings": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          { "items": ["quantum_creativity:quantum_leggings"] }
+        ]
+      }
+    },
+    "boots": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          { "items": ["quantum_creativity:quantum_boots"] }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    ["helmet", "chestplate", "leggings", "boots"]
+  ],
+  "rewards": {
+    "experience": 47520
+  }
+}

@@ -1,15 +1,11 @@
 package com.flyingfrog317.quantum_creativity.quantization;
 
 import com.flyingfrog317.quantum_creativity.QuantumCreativity;
-import net.minecraft.client.renderer.LightTexture;
 import net.minecraft.client.renderer.MultiBufferSource;
-import net.minecraft.client.renderer.RenderStateShard;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.blockentity.BlockEntityRendererProvider;
-import net.minecraft.client.renderer.entity.EntityRendererProvider;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
-import net.minecraft.core.NonNullList;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.network.Connection;
 import net.minecraft.network.protocol.Packet;
@@ -20,18 +16,14 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.MenuProvider;
 import net.minecraft.world.SimpleContainer;
 import net.minecraft.world.WorldlyContainer;
-import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.inventory.AbstractContainerMenu;
 import net.minecraft.world.inventory.ContainerLevelAccess;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
-import net.minecraft.world.level.block.entity.BaseContainerBlockEntity;
 import net.minecraft.world.level.block.entity.BlockEntity;
-import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.state.BlockState;
-import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.client.event.EntityRenderersEvent;
 import net.minecraftforge.common.capabilities.Capability;
 import net.minecraftforge.common.capabilities.ForgeCapabilities;
@@ -42,12 +34,14 @@ import net.minecraftforge.items.IItemHandler;
 import net.minecraftforge.items.IItemHandlerModifiable;
 import net.minecraftforge.items.ItemStackHandler;
 import net.minecraftforge.items.wrapper.SidedInvWrapper;
-import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 import software.bernie.geckolib.animatable.GeoBlockEntity;
-import software.bernie.geckolib.core.animatable.GeoAnimatable;
 import software.bernie.geckolib.core.animatable.instance.AnimatableInstanceCache;
-import software.bernie.geckolib.core.animation.*;
+import software.bernie.geckolib.core.animation.AnimatableManager;
+import software.bernie.geckolib.core.animation.Animation;
+import software.bernie.geckolib.core.animation.AnimationController;
+import software.bernie.geckolib.core.animation.AnimationState;
+import software.bernie.geckolib.core.animation.RawAnimation;
 import software.bernie.geckolib.core.object.Color;
 import software.bernie.geckolib.core.object.PlayState;
 import software.bernie.geckolib.model.GeoModel;
@@ -242,7 +236,7 @@ class QuantizerBlockEntity extends BlockEntity implements MenuProvider, WorldlyC
         IItemHandler itemHandler = handler.orElseThrow(
                 () -> new IllegalStateException("Missing ITEM_HANDLER capability")
         );
-
+        //noinspection DataFlowIssue
         return new QuantizerBlockMenu(
                 id,
                 inv,
@@ -272,7 +266,7 @@ class QuantizerBlockEntity extends BlockEntity implements MenuProvider, WorldlyC
     public AnimatableInstanceCache getAnimatableInstanceCache() {
         return this.cache;
     }
-    static public class QuantizerModel extends GeoModel<QuantizerBlockEntity> {
+    static class QuantizerModel extends GeoModel<QuantizerBlockEntity> {
         @Override
         public ResourceLocation getModelResource(QuantizerBlockEntity QuantizerBlockEntity) {
             return QuantumCreativity.asResource(QuantizerBlockEntity.getModelPath());
@@ -317,8 +311,9 @@ class QuantizerBlockEntity extends BlockEntity implements MenuProvider, WorldlyC
     public static void registerRenderer(final EntityRenderersEvent.RegisterRenderers event){
         event.registerBlockEntityRenderer(QuantizingRegistries.QuantizerBlockEntityReg.get(), Renderer::new);
     }
-    private int craftingTicks = 100;
+    private final int craftingTicks = 100;
     private int craftingProgress = 0;
+    @SuppressWarnings("unused")
     public static void tick(Level level, BlockPos pos, BlockState state, QuantizerBlockEntity blockEntity){
         if (level.isClientSide()){
             if (!blockEntity.getItem(0).isEmpty()){
@@ -365,9 +360,10 @@ class QuantizerBlockEntity extends BlockEntity implements MenuProvider, WorldlyC
             return false;
         }
         SimpleContainer container=new SimpleContainer(getItem(0));
-        Optional<QuantizingRecipe> recipe=level.getRecipeManager().getRecipeFor(QuantizingRegistries.QuantizingRecipeType.get(),container,level);
+
+        Optional<QuantizingRecipe> recipe=Objects.requireNonNull(level).getRecipeManager().getRecipeFor(QuantizingRegistries.QuantizingRecipeType.get(),container,level);
         if (recipe.isPresent()){
-            ItemStack output = recipe.get().assemble(container,level.registryAccess());
+            ItemStack output = recipe.get().resolve(level.random);
             if (outputItem(output)) {
                 getItem(0).shrink(1);
             } else {

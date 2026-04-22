@@ -1,8 +1,0 @@
-{
-  "type": "minecraft:stonecutting",
-  "ingredient": {
-    "item": "quantum_creativity:blank_smithing_template"
-  },
-  "result": "minecraft:silence_armor_trim_smithing_template",
-  "count": 1
-}

@@ -1,0 +1,29 @@
+{
+  "parent": "quantum_creativity:quantum/pristine_production",
+  "display": {
+    "icon": {
+      "item": "quantum_creativity:quantum_ingot"
+    },
+    "title": {
+      "translate": "advancement.quantum.fragment_of_reality.title"
+    },
+    "description": {
+      "translate": "advancement.quantum.fragment_of_reality.description"
+    },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "crafted": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "quantum_creativity:quantum_ingot_casting"
+      }
+    }
+  },
+  "rewards": {
+    "experience": 1395
+  }
+}
