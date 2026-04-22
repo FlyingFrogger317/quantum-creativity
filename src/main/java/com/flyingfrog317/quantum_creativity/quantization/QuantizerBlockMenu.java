@@ -4,7 +4,6 @@ import com.flyingfrog317.quantum_creativity.QuantumCreativity;
 import net.minecraft.core.BlockPos;
 import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.util.Tuple;
-import net.minecraft.world.Container;
 import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.inventory.AbstractContainerMenu;
@@ -15,18 +14,17 @@ import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraftforge.common.capabilities.ForgeCapabilities;
 import net.minecraftforge.common.util.LazyOptional;
 import net.minecraftforge.items.IItemHandler;
-import net.minecraftforge.items.ItemStackHandler;
 import net.minecraftforge.items.SlotItemHandler;
 import org.jetbrains.annotations.NotNull;
 
+import java.util.Objects;
+
 class QuantizerBlockMenu extends AbstractContainerMenu {
-    private final IItemHandler blockInventory;
     private final ContainerLevelAccess access;
     private static Tuple<IItemHandler,ContainerLevelAccess> construction_helper (Inventory inv, FriendlyByteBuf buf){
-        QuantumCreativity.LOGGER.info("constr helper");
         BlockPos pos = buf.readBlockPos();
         BlockEntity be = inv.player.level().getBlockEntity(pos);
-        LazyOptional<IItemHandler> handler = ((QuantizerBlockEntity) be)
+        LazyOptional<IItemHandler> handler = Objects.requireNonNull(be)
                 .getCapability(ForgeCapabilities.ITEM_HANDLER, null);
         IItemHandler item = handler.orElseThrow(() -> new IllegalStateException("Missing ItemHandler capability!"));
         ContainerLevelAccess access = ContainerLevelAccess.create(inv.player.level(), pos);
@@ -51,7 +49,7 @@ class QuantizerBlockMenu extends AbstractContainerMenu {
     public QuantizerBlockMenu(int pContainerId, Inventory playerInventory, Tuple<IItemHandler,ContainerLevelAccess> tuple){
         super(QuantizingRegistries.QuantizerBlockMenuReg.get(), pContainerId);
         QuantumCreativity.LOGGER.info("const");
-        this.blockInventory= tuple.getA();
+        IItemHandler blockInventory = tuple.getA();
         this.access = tuple.getB();
         int centerX = 80;
         int centerY = 69;
@@ -100,7 +98,7 @@ class QuantizerBlockMenu extends AbstractContainerMenu {
         QuantumCreativity.LOGGER.info("ended");
 
     }
-    class ResultSlotItemHandler extends SlotItemHandler {
+    static class ResultSlotItemHandler extends SlotItemHandler {
         public ResultSlotItemHandler(IItemHandler itemHandler, int index, int xPosition, int yPosition) {
             super(itemHandler, index, xPosition, yPosition);
         }
@@ -114,7 +112,7 @@ class QuantizerBlockMenu extends AbstractContainerMenu {
     public ItemStack quickMoveStack(Player player, int i) {
         ItemStack moved=ItemStack.EMPTY;
         Slot slot = this.slots.get(i);
-        if (slot == null || !slot.hasItem()){
+        if (!slot.hasItem()){
             return moved;
         }
         ItemStack inSlot = slot.getItem();
@@ -123,7 +121,7 @@ class QuantizerBlockMenu extends AbstractContainerMenu {
         if (i < machineSlots){
             if (!this.moveItemStackTo(inSlot,machineSlots+27,this.slots.size(),false) && !this.moveItemStackTo(inSlot,machineSlots,this.slots.size()-9,false)){
                 return ItemStack.EMPTY;
-            };
+            }
         } else {
             if (!this.moveItemStackTo(inSlot,0,1,false)){
                 return ItemStack.EMPTY;

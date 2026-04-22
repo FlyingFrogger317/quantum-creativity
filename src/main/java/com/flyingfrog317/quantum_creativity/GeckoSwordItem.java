@@ -5,7 +5,6 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.SwordItem;
 import net.minecraft.world.item.Tier;
-import net.minecraft.world.item.Tiers;
 import net.minecraftforge.client.extensions.common.IClientItemExtensions;
 import software.bernie.geckolib.animatable.GeoItem;
 import software.bernie.geckolib.core.animatable.instance.AnimatableInstanceCache;
@@ -17,8 +16,8 @@ import software.bernie.geckolib.util.GeckoLibUtil;
 import java.util.function.Consumer;
 
 public class GeckoSwordItem extends SwordItem implements GeoItem {
-    private String MODID;
-    private String ITEM_NAME;
+    private final String MODID;
+    private final String ITEM_NAME;
     private final AnimatableInstanceCache cache = GeckoLibUtil.createInstanceCache(this);
     GeckoSwordItem(Tier tier, int dmg, float speed, Item.Properties  properties, String modid, String name){
         super(tier,dmg,speed,properties);

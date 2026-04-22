@@ -9,15 +9,13 @@ import software.bernie.geckolib.core.animatable.instance.AnimatableInstanceCache
 import software.bernie.geckolib.core.animation.AnimatableManager;
 import software.bernie.geckolib.model.GeoModel;
 import software.bernie.geckolib.renderer.GeoItemRenderer;
-import software.bernie.geckolib.renderer.GeoRenderer;
 import software.bernie.geckolib.util.GeckoLibUtil;
 
 import java.util.function.Consumer;
-import java.util.function.Supplier;
 
 public class GenericGeckoItem extends Item implements GeoItem {
-    private String MODID;
-    private String ITEM_NAME;
+    private final String MODID;
+    private final String ITEM_NAME;
     private final AnimatableInstanceCache cache = GeckoLibUtil.createInstanceCache(this);
     GenericGeckoItem(Item.Properties properties, String modid, String name){
         super(properties);

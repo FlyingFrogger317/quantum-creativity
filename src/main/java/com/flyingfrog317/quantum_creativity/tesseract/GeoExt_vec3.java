@@ -1,19 +1,9 @@
 package com.flyingfrog317.quantum_creativity.tesseract;
-
-public final class GeoExt_vec3 {
-
-    public final float x;
-    public final float y;
-    public final float z;
+@SuppressWarnings("unused")
+public record GeoExt_vec3(float x, float y, float z) {
 
     public static final GeoExt_vec3 ZERO = new GeoExt_vec3(0, 0, 0);
-    public static final GeoExt_vec3 ONE  = new GeoExt_vec3(1, 1, 1);
-
-    public GeoExt_vec3(float x, float y, float z) {
-        this.x = x;
-        this.y = y;
-        this.z = z;
-    }
+    public static final GeoExt_vec3 ONE = new GeoExt_vec3(1, 1, 1);
 
     // -------------------------
     // Basic math operations
@@ -89,8 +79,7 @@ public final class GeoExt_vec3 {
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
-        if (!(o instanceof GeoExt_vec3)) return false;
-        GeoExt_vec3 v = (GeoExt_vec3) o;
+        if (!(o instanceof GeoExt_vec3 v)) return false;
         return Float.compare(v.x, x) == 0
                 && Float.compare(v.y, y) == 0
                 && Float.compare(v.z, z) == 0;

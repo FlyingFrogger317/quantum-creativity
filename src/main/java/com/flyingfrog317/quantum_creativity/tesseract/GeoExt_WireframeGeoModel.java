@@ -82,10 +82,10 @@ public abstract class GeoExt_WireframeGeoModel<T extends GeoAnimatable> extends 
             GeoExt_vec3 dir = delta.scale(1.0f / len);
             GeoExt_vec3 midpoint = origin.add(target).scale(0.5f);
 
-            float horizontalLength = (float) Math.sqrt(dir.x * dir.x + dir.y * dir.y);
-            float rotX = (float) Math.atan2(dir.z, horizontalLength);
+            float horizontalLength = (float) Math.sqrt(dir.x() * dir.x() + dir.y() * dir.y());
+            float rotX = (float) Math.atan2(dir.z(), horizontalLength);
             float rotY = 0f;
-            float rotZ = (float) Math.atan2(dir.x, dir.y);
+            float rotZ = (float) Math.atan2(dir.x(), dir.y());
 
             applyBoneLine(
                     bones[currentBone++],
@@ -104,15 +104,15 @@ public abstract class GeoExt_WireframeGeoModel<T extends GeoAnimatable> extends 
                                GeoExt_vec3 pos,
                                GeoExt_vec3 rot,
                                float len,
-                               float thickness) {
+                               @SuppressWarnings("SameParameterValue") float thickness) {
 
-        bone.setPosX(pos.x);
-        bone.setPosY(pos.y);
-        bone.setPosZ(pos.z);
+        bone.setPosX(pos.x());
+        bone.setPosY(pos.y());
+        bone.setPosZ(pos.z());
 
-        bone.setRotX(rot.x);
-        bone.setRotY(rot.y);
-        bone.setRotZ(rot.z);
+        bone.setRotX(rot.x());
+        bone.setRotY(rot.y());
+        bone.setRotZ(rot.z());
 
         bone.setScaleY(len);
         bone.setScaleX(thickness);
@@ -120,9 +120,9 @@ public abstract class GeoExt_WireframeGeoModel<T extends GeoAnimatable> extends 
     }
 
     private void applyBoneNode(GeoBone bone, GeoExt_vec3 pos) {
-        bone.setPosX(pos.x);
-        bone.setPosY(pos.y);
-        bone.setPosZ(pos.z);
+        bone.setPosX(pos.x());
+        bone.setPosY(pos.y());
+        bone.setPosZ(pos.z());
 
         bone.setRotX(0);
         bone.setRotY(0);

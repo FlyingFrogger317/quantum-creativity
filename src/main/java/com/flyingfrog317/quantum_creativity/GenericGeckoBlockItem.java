@@ -5,17 +5,13 @@ import net.minecraft.client.renderer.MultiBufferSource;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.BlockItem;
-import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
 import net.minecraftforge.client.extensions.common.IClientItemExtensions;
 import org.jetbrains.annotations.Nullable;
 import software.bernie.geckolib.animatable.GeoItem;
-import software.bernie.geckolib.animatable.SingletonGeoAnimatable;
 import software.bernie.geckolib.core.animatable.instance.AnimatableInstanceCache;
 import software.bernie.geckolib.core.animation.AnimatableManager;
 import software.bernie.geckolib.core.animation.AnimationController;
-import software.bernie.geckolib.core.animation.AnimationState;
-import software.bernie.geckolib.core.object.PlayState;
 import software.bernie.geckolib.model.GeoModel;
 import software.bernie.geckolib.renderer.GeoItemRenderer;
 import software.bernie.geckolib.util.GeckoLibUtil;
@@ -24,10 +20,11 @@ import java.util.function.Consumer;
 import java.util.function.Function;
 
 public class GenericGeckoBlockItem extends BlockItem implements GeoItem {
-    private String MODID;
-    private String ITEM_NAME;
+    private final String MODID;
+    private final String ITEM_NAME;
     private final Function<GenericGeckoBlockItem, AnimationController<GenericGeckoBlockItem>> controllerBuilder;
     private final AnimatableInstanceCache cache = GeckoLibUtil.createInstanceCache(this);
+    @SuppressWarnings("unused")
     public GenericGeckoBlockItem(Block block, Properties properties, String modid, String name){
         this(block,properties,modid,name,null);
     }

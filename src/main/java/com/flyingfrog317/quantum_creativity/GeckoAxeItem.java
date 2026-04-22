@@ -14,8 +14,8 @@ import software.bernie.geckolib.util.GeckoLibUtil;
 import java.util.function.Consumer;
 
 public class GeckoAxeItem extends AxeItem implements GeoItem {
-    private String MODID;
-    private String ITEM_NAME;
+    private final String MODID;
+    private final String ITEM_NAME;
     private final AnimatableInstanceCache cache = GeckoLibUtil.createInstanceCache(this);
     GeckoAxeItem(Tier tier, int dmg, float speed, Item.Properties  properties, String modid, String name){
         super(tier,dmg,speed,properties);
