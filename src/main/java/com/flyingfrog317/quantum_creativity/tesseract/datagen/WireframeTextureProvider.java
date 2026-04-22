@@ -60,6 +60,7 @@ public class WireframeTextureProvider implements DataProvider {
                     ImageIO.write(img, "png", buffer);
 
                     byte[] bytes = buffer.toByteArray();
+                    //noinspection deprecation
                     cache.writeIfNeeded(
                             path,
                             bytes,

@@ -5,6 +5,7 @@ import com.google.gson.JsonObject;
 import net.minecraft.data.CachedOutput;
 import net.minecraft.data.DataProvider;
 import net.minecraft.data.PackOutput;
+import org.jetbrains.annotations.NotNull;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -51,44 +52,7 @@ public class WireframeGeoProvider implements DataProvider {
 
             for (int i = 0; i < totalBones; i++) {
 
-                JsonObject bone = new JsonObject();
-                bone.addProperty(
-                        "name",
-                        "bone" + i
-                );
-
-                JsonArray pivot = new JsonArray();
-                pivot.add(0);
-                pivot.add(0);
-                pivot.add(0);
-
-                bone.add("pivot", pivot);
-
-                JsonArray cubes = new JsonArray();
-
-                JsonObject cube = new JsonObject();
-
-                JsonArray origin = new JsonArray();
-                origin.add(-0.5);
-                origin.add(-0.5);
-                origin.add(-0.5);
-
-                JsonArray size = new JsonArray();
-                size.add(1);
-                size.add(1);
-                size.add(1);
-
-                JsonArray uv = new JsonArray();
-                uv.add(0);
-                uv.add(0);
-
-                cube.add("origin", origin);
-                cube.add("size", size);
-                cube.add("uv", uv);
-
-                cubes.add(cube);
-
-                bone.add("cubes", cubes);
+                JsonObject bone = getBone(i);
 
                 bones.add(bone);
             }
@@ -116,6 +80,53 @@ public class WireframeGeoProvider implements DataProvider {
         return CompletableFuture.allOf(
                 writes.toArray(CompletableFuture[]::new)
         );
+    }
+
+    private static @NotNull JsonObject getBone(int i) {
+        JsonObject bone = new JsonObject();
+        bone.addProperty(
+                "name",
+                "bone" + i
+        );
+
+        JsonArray pivot = new JsonArray();
+        pivot.add(0);
+        pivot.add(0);
+        pivot.add(0);
+
+        bone.add("pivot", pivot);
+
+        JsonArray cubes = getCubes();
+
+        bone.add("cubes", cubes);
+        return bone;
+    }
+
+    private static @NotNull JsonArray getCubes() {
+        JsonArray cubes = new JsonArray();
+
+        JsonObject cube = new JsonObject();
+
+        JsonArray origin = new JsonArray();
+        origin.add(-0.5);
+        origin.add(-0.5);
+        origin.add(-0.5);
+
+        JsonArray size = new JsonArray();
+        size.add(1);
+        size.add(1);
+        size.add(1);
+
+        JsonArray uv = new JsonArray();
+        uv.add(0);
+        uv.add(0);
+
+        cube.add("origin", origin);
+        cube.add("size", size);
+        cube.add("uv", uv);
+
+        cubes.add(cube);
+        return cubes;
     }
 
     @Override

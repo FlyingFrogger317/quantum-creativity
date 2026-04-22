@@ -4,8 +4,9 @@ import net.minecraft.util.Tuple;
 
 import java.util.ArrayList;
 import java.util.List;
-
+@SuppressWarnings("unused")
 public class TesseractMath {
+    @SuppressWarnings("unchecked")
     private static final Tuple<Integer, Integer>[] CUBE_EDGE_TEMPLATE = new Tuple[] {
             new Tuple<>(0, 1),
             new Tuple<>(0, 2),
@@ -54,6 +55,7 @@ public class TesseractMath {
     }
 
     public static Tuple<Integer, Integer>[] generateOuterAndInnerCubeEdges() {
+        @SuppressWarnings("unchecked")
         Tuple<Integer, Integer>[] edges = new Tuple[(CUBE_EDGE_TEMPLATE.length * 2) + 8];
 
         for (int i = 0; i < CUBE_EDGE_TEMPLATE.length; i++) {
@@ -106,6 +108,7 @@ public class TesseractMath {
             }
         }
 
+        //noinspection unchecked
         return edges.toArray(new Tuple[0]);
     }
 }

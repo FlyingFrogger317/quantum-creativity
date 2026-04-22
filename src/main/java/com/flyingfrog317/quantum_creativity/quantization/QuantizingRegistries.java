@@ -3,12 +3,8 @@ package com.flyingfrog317.quantum_creativity.quantization;
 import com.flyingfrog317.quantum_creativity.QuantumCreativity;
 import com.flyingfrog317.quantum_creativity.Registrater;
 import net.minecraft.client.gui.screens.MenuScreens;
-import net.minecraft.resources.ResourceLocation;
-import net.minecraft.world.flag.FeatureFlag;
-import net.minecraft.world.flag.FeatureFlags;
 import net.minecraft.world.inventory.MenuType;
 import net.minecraft.world.item.Item;
-import net.minecraft.world.item.crafting.Recipe;
 import net.minecraft.world.item.crafting.RecipeSerializer;
 import net.minecraft.world.item.crafting.RecipeType;
 import net.minecraft.world.level.block.Block;
@@ -25,6 +21,7 @@ import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 @Mod.EventBusSubscriber(modid = QuantumCreativity.MODID, value = Dist.CLIENT, bus = Mod.EventBusSubscriber.Bus.MOD)
 public class QuantizingRegistries {
+    @SuppressWarnings({"FieldCanBeLocal", "unused"})
     static private Registrater registrater;
     static private final DeferredRegister<RecipeSerializer<?>> RECIPE_REGISTERY = DeferredRegister.create(ForgeRegistries.Keys.RECIPE_SERIALIZERS, QuantumCreativity.MODID);
     static private final DeferredRegister<BlockEntityType<?>> BLOCK_ENTITY_REGISTRY = DeferredRegister.create(ForgeRegistries.Keys.BLOCK_ENTITY_TYPES, QuantumCreativity.MODID);
@@ -38,10 +35,12 @@ public class QuantizingRegistries {
     static public RegistryObject<MenuType<QuantizerBlockMenu>> QuantizerBlockMenuReg;
     public static void initialize(Registrater reg){
         registrater=reg;
+        //noinspection Convert2Diamond
         QuantizingRecipeType = RECIPETYPE_REGISTRY.register("quantizing", ()-> new RecipeType<QuantizingRecipe>() {});
         QuantizingRecipeSerializer = RECIPE_REGISTERY.register("quantizing", QuantizingSerializer::new);
         QuantizerBlockReg=reg.getRegisteredBlock("quantizer");
         QuantizerItemReg=reg.getRegisteredItem("quantizer");
+        //noinspection DataFlowIssue
         QuantizerBlockEntityReg = BLOCK_ENTITY_REGISTRY.register("quantizer_entity",()->BlockEntityType.Builder.of(QuantizerBlockEntity::new,QuantizerBlockReg.get()).build(null));
         QuantizerBlockMenuReg = MENUTYPE_REGISTRY.register("quantizer_menu",()-> IForgeMenuType.create(QuantizerBlockMenu::new));
     }

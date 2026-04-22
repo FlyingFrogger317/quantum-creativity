@@ -52,7 +52,7 @@ import java.util.Objects;
 import java.util.Optional;
 
 @Mod.EventBusSubscriber(modid = QuantumCreativity.MODID, bus = Mod.EventBusSubscriber.Bus.MOD)
-class QuantizerBlockEntity extends BlockEntity implements MenuProvider, WorldlyContainer, GeoBlockEntity {
+public class QuantizerBlockEntity extends BlockEntity implements MenuProvider, WorldlyContainer, GeoBlockEntity {
 
     private final ItemStackHandler inventory = new ItemStackHandler(13);
 

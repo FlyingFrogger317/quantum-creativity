@@ -19,7 +19,7 @@ import org.jetbrains.annotations.NotNull;
 
 import java.util.Objects;
 
-class QuantizerBlockMenu extends AbstractContainerMenu {
+public class QuantizerBlockMenu extends AbstractContainerMenu {
     private final ContainerLevelAccess access;
     private static Tuple<IItemHandler,ContainerLevelAccess> construction_helper (Inventory inv, FriendlyByteBuf buf){
         BlockPos pos = buf.readBlockPos();
