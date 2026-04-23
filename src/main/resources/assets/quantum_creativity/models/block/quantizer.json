@@ -5,6 +5,9 @@
     128,
     128
   ],
+  "textures": {
+    "particle": "quantum_creativity:block/quantizer"
+  },
   "display": {
     "thirdperson_righthand": {
       "scale": [

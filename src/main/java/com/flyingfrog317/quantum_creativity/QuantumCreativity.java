@@ -9,12 +9,10 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.ArmorItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Rarity;
-import net.minecraft.world.item.Tiers;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraftforge.fluids.FluidType;
 import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.fml.config.ModConfig;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import org.slf4j.Logger;
 import software.bernie.geckolib.core.animation.Animation;
@@ -33,7 +31,6 @@ public class QuantumCreativity
     public QuantumCreativity(FMLJavaModLoadingContext context)
     {
         registrys  = new Registrater(MODID);
-        context.registerConfig(ModConfig.Type.COMMON, Config.SPEC);
         Rarity quantumRarity = Rarity.create("QUANTUM",ChatFormatting.BOLD);
         registrys.createCreativeModeTab("quantum");
         registrys.usingCreativeTab("quantum");
@@ -41,20 +38,20 @@ public class QuantumCreativity
         QuantumArmorMaterial ARMOR_QUANTUM = new QuantumArmorMaterial();
         registrys.createRawItem("quantum_axe",()->
             new GeckoAxeItem(
-                    Tiers.NETHERITE,
-                    100,
-                    1.2f,
-                    new Item.Properties().rarity(quantumRarity).stacksTo(1).durability(10000),
+                    QUANTUM,
+                    ItemBalancing.QUANTUM_AXE_DAMAGE,
+                    ItemBalancing.QUANTUM_AXE_ATTACK_SPEED,
+                    new Item.Properties().rarity(quantumRarity).stacksTo(ItemBalancing.SINGLE_STACK_SIZE).durability(ItemBalancing.QUANTUM_TOOL_DURABILITY),
                     MODID,
                     "quantum_axe"
             )
         );
         registrys.createRawItem("quantum_pickaxe",()->
                 new GeckoPickaxeItem(
-                    Tiers.NETHERITE,
-                    30,
-                    0.8f,
-                    new Item.Properties().rarity(quantumRarity).stacksTo(1).durability(10000),
+                    QUANTUM,
+                    ItemBalancing.QUANTUM_PICKAXE_DAMAGE,
+                    ItemBalancing.QUANTUM_PICKAXE_ATTACK_SPEED,
+                    new Item.Properties().rarity(quantumRarity).stacksTo(ItemBalancing.SINGLE_STACK_SIZE).durability(ItemBalancing.QUANTUM_TOOL_DURABILITY),
                     MODID,
                     "quantum_pickaxe"
                 )
@@ -62,9 +59,9 @@ public class QuantumCreativity
         registrys.createRawItem("quantum_sword",()->
                 new GeckoSwordItem(
                         QUANTUM,
-                        50,
-                        3,
-                        new Item.Properties().rarity(quantumRarity).stacksTo(1).durability(10000),
+                        ItemBalancing.QUANTUM_SWORD_DAMAGE,
+                        ItemBalancing.QUANTUM_SWORD_ATTACK_SPEED,
+                        new Item.Properties().rarity(quantumRarity).stacksTo(ItemBalancing.SINGLE_STACK_SIZE).durability(ItemBalancing.QUANTUM_TOOL_DURABILITY),
                         MODID,
                         "quantum_sword"
                 )
@@ -72,85 +69,87 @@ public class QuantumCreativity
         registrys.createRawItem("quantum_shovel",()->
                 new GeckoShovelItem(
                         QUANTUM,
-                        30,
-                        0.8f,
-                        new Item.Properties().rarity(quantumRarity).stacksTo(1).durability(10000),
+                        ItemBalancing.QUANTUM_SHOVEL_DAMAGE,
+                        ItemBalancing.QUANTUM_SHOVEL_ATTACK_SPEED,
+                        new Item.Properties().rarity(quantumRarity).stacksTo(ItemBalancing.SINGLE_STACK_SIZE).durability(ItemBalancing.QUANTUM_TOOL_DURABILITY),
                         MODID,
                         "quantum_shovel"
                 )
         );
-        registrys.createItem("quantum_hoe",new Item.Properties().stacksTo(1));
+        registrys.createItem("quantum_hoe",new Item.Properties().stacksTo(ItemBalancing.SINGLE_STACK_SIZE));
         registrys.createRawItem("quantum_helmet",()->new GeckoArmorItem(
                 ARMOR_QUANTUM,
                 ArmorItem.Type.HELMET,
-                new Item.Properties().rarity(quantumRarity).stacksTo(1).durability(10000),
+                new Item.Properties().rarity(quantumRarity).stacksTo(ItemBalancing.SINGLE_STACK_SIZE).durability(ItemBalancing.QUANTUM_TOOL_DURABILITY),
                 MODID,
                 "quantum_armor"
         ));
         registrys.createRawItem("quantum_chestplate",()->new GeckoArmorItem(
                 ARMOR_QUANTUM,
                 ArmorItem.Type.CHESTPLATE,
-                new Item.Properties().rarity(quantumRarity).stacksTo(1).durability(10000),
+                new Item.Properties().rarity(quantumRarity).stacksTo(ItemBalancing.SINGLE_STACK_SIZE).durability(ItemBalancing.QUANTUM_TOOL_DURABILITY),
                 MODID,
                 "quantum_armor"
         ));
         registrys.createRawItem("quantum_leggings",()->new GeckoArmorItem(
                 ARMOR_QUANTUM,
                 ArmorItem.Type.LEGGINGS,
-                new Item.Properties().rarity(quantumRarity).stacksTo(1).durability(10000),
+                new Item.Properties().rarity(quantumRarity).stacksTo(ItemBalancing.SINGLE_STACK_SIZE).durability(ItemBalancing.QUANTUM_TOOL_DURABILITY),
                 MODID,
                 "quantum_armor"
         ));
         registrys.createRawItem("quantum_boots",()->new GeckoArmorItem(
                 ARMOR_QUANTUM,
                 ArmorItem.Type.BOOTS,
-                new Item.Properties().rarity(quantumRarity).stacksTo(1).durability(10000),
+                new Item.Properties().rarity(quantumRarity).stacksTo(ItemBalancing.SINGLE_STACK_SIZE).durability(ItemBalancing.QUANTUM_TOOL_DURABILITY),
                 MODID,
                 "quantum_armor"
         ));
-        int quantumComponentStackSize=64;
-        registrys.createItem("damaged_quantum_storage_component", new Item.Properties().stacksTo(quantumComponentStackSize));
-        registrys.createItem("damaged_quantum_bubble", new Item.Properties().stacksTo(quantumComponentStackSize));
-        registrys.createItem("damaged_hardened_metal", new Item.Properties().stacksTo(quantumComponentStackSize));
-        registrys.createItem("damaged_quantized_magnet", new Item.Properties().stacksTo(quantumComponentStackSize));
-        registrys.createItem("damaged_aquatic_trinket", new Item.Properties().stacksTo(quantumComponentStackSize));
-        registrys.createItem("damaged_crystallized_experience", new Item.Properties().stacksTo(quantumComponentStackSize));
-        registrys.createItem("damaged_bottle_o_energy", new Item.Properties().stacksTo(quantumComponentStackSize));
-        registrys.createBlock("damaged_quantum_casing", Block.Properties.of().destroyTime(0.2f), new Item.Properties().stacksTo(quantumComponentStackSize));
-        registrys.createItem("quantum_storage_component",new Item.Properties().stacksTo(quantumComponentStackSize));
-        registrys.createItem("quantum_bubble",new Item.Properties().stacksTo(quantumComponentStackSize));
-        registrys.createItem("hardened_metal",new Item.Properties().stacksTo(quantumComponentStackSize));
-        registrys.createItem("quantized_magnet",new Item.Properties().stacksTo(quantumComponentStackSize));
-        registrys.createItem("aquatic_trinket",new Item.Properties().stacksTo(quantumComponentStackSize));
-        registrys.createItem("crystallized_experience",new Item.Properties().stacksTo(quantumComponentStackSize));
-        registrys.createItem("bottle_o_energy",new Item.Properties().stacksTo(quantumComponentStackSize));
-        registrys.createBlock("quantum_casing",Block.Properties.of().destroyTime(0.2f),new Item.Properties().stacksTo(quantumComponentStackSize));
-        registrys.createItem("quantum_mechanism",new Item.Properties().stacksTo(64));
+        registrys.createItem("damaged_quantum_storage_component", new Item.Properties().stacksTo(ItemBalancing.QUANTUM_COMPONENT_STACK_SIZE));
+        registrys.createItem("damaged_quantum_bubble", new Item.Properties().stacksTo(ItemBalancing.QUANTUM_COMPONENT_STACK_SIZE));
+        registrys.createItem("damaged_hardened_metal", new Item.Properties().stacksTo(ItemBalancing.QUANTUM_COMPONENT_STACK_SIZE));
+        registrys.createItem("damaged_quantized_magnet", new Item.Properties().stacksTo(ItemBalancing.QUANTUM_COMPONENT_STACK_SIZE));
+        registrys.createItem("damaged_aquatic_trinket", new Item.Properties().stacksTo(ItemBalancing.QUANTUM_COMPONENT_STACK_SIZE));
+        registrys.createItem("damaged_crystallized_experience", new Item.Properties().stacksTo(ItemBalancing.QUANTUM_COMPONENT_STACK_SIZE));
+        registrys.createItem("damaged_bottle_o_energy", new Item.Properties().stacksTo(ItemBalancing.QUANTUM_COMPONENT_STACK_SIZE));
+        registrys.createBlock("damaged_quantum_casing", Block.Properties.of().destroyTime(ItemBalancing.DAMAGED_QUANTUM_CASING_DESTROY_TIME), new Item.Properties().stacksTo(ItemBalancing.QUANTUM_COMPONENT_STACK_SIZE));
+        registrys.createItem("quantum_storage_component",new Item.Properties().stacksTo(ItemBalancing.QUANTUM_COMPONENT_STACK_SIZE));
+        registrys.createItem("quantum_bubble",new Item.Properties().stacksTo(ItemBalancing.QUANTUM_COMPONENT_STACK_SIZE));
+        registrys.createItem("hardened_metal",new Item.Properties().stacksTo(ItemBalancing.QUANTUM_COMPONENT_STACK_SIZE));
+        registrys.createItem("quantized_magnet",new Item.Properties().stacksTo(ItemBalancing.QUANTUM_COMPONENT_STACK_SIZE));
+        registrys.createItem("aquatic_trinket",new Item.Properties().stacksTo(ItemBalancing.QUANTUM_COMPONENT_STACK_SIZE));
+        registrys.createItem("crystallized_experience",new Item.Properties().stacksTo(ItemBalancing.QUANTUM_COMPONENT_STACK_SIZE));
+        registrys.createItem("bottle_o_energy",new Item.Properties().stacksTo(ItemBalancing.QUANTUM_COMPONENT_STACK_SIZE));
+        registrys.createBlock("quantum_casing",Block.Properties.of().destroyTime(ItemBalancing.QUANTUM_CASING_DESTROY_TIME),new Item.Properties().stacksTo(ItemBalancing.QUANTUM_COMPONENT_STACK_SIZE));
+        registrys.createItem("quantum_mechanism",new Item.Properties().stacksTo(ItemBalancing.STANDARD_STACK_SIZE));
         registrys.createFluid(
                 "liquid_quantum_metal",
-                FluidType.Properties.create().density(3000).viscosity(6000).temperature(1300)
+                FluidType.Properties.create()
+                        .density(ItemBalancing.LIQUID_QUANTUM_METAL_DENSITY)
+                        .viscosity(ItemBalancing.LIQUID_QUANTUM_METAL_VISCOSITY)
+                        .temperature(ItemBalancing.LIQUID_QUANTUM_METAL_TEMPERATURE)
         );
-        registrys.createItem("quantum_ingot", new Item.Properties().stacksTo(64));
-        registrys.createBlock("block_of_quantum_ingot", BlockBehaviour.Properties.of(), new Item.Properties().stacksTo(64));
-        registrys.createItem("blank_smithing_template", new Item.Properties().stacksTo(64));
-        registrys.createItem("quantum_upgrade_template", new Item.Properties().stacksTo(64));
-        BlockBehaviour.Properties schrodingerBoxProperties = Block.Properties.of().strength(0.5f);
-        registrys.createBlock("unobserved_schrodingers_box", schrodingerBoxProperties, new Item.Properties().stacksTo(16));
-        registrys.createBlock("observable_schrodingers_box", schrodingerBoxProperties, new Item.Properties().stacksTo(16));
-        registrys.createBlock("observed_schrodingers_box", schrodingerBoxProperties, new Item.Properties().stacksTo(1));
+        registrys.createItem("quantum_ingot", new Item.Properties().stacksTo(ItemBalancing.STANDARD_STACK_SIZE));
+        registrys.createBlock("block_of_quantum_ingot", BlockBehaviour.Properties.of(), new Item.Properties().stacksTo(ItemBalancing.STANDARD_STACK_SIZE));
+        registrys.createItem("blank_smithing_template", new Item.Properties().stacksTo(ItemBalancing.STANDARD_STACK_SIZE));
+        registrys.createItem("quantum_upgrade_template", new Item.Properties().stacksTo(ItemBalancing.STANDARD_STACK_SIZE));
+        BlockBehaviour.Properties schrodingerBoxProperties = Block.Properties.of().strength(ItemBalancing.SCHRODINGER_BOX_STRENGTH);
+        registrys.createBlock("unobserved_schrodingers_box", schrodingerBoxProperties, new Item.Properties().stacksTo(ItemBalancing.SMALL_STACK_SIZE));
+        registrys.createBlock("observable_schrodingers_box", schrodingerBoxProperties, new Item.Properties().stacksTo(ItemBalancing.SMALL_STACK_SIZE));
+        registrys.createBlock("observed_schrodingers_box", schrodingerBoxProperties, new Item.Properties().stacksTo(ItemBalancing.SINGLE_STACK_SIZE));
         registrys.createRawItem("tesseract", () ->
-                new Tesseract(new Item.Properties().rarity(quantumRarity).stacksTo(1))
+                new Tesseract(new Item.Properties().rarity(quantumRarity).stacksTo(ItemBalancing.SINGLE_STACK_SIZE))
         );
         registrys.createRawRawBlock("quantizer",
-            ()->new QuantizerBlock(BlockBehaviour.Properties.of().noOcclusion().strength(1.5f,20f).requiresCorrectToolForDrops()),
-            block -> new GenericGeckoBlockItem(block,new Item.Properties().stacksTo(64),MODID,"quantizer", item -> new AnimationController<>(
+            ()->new QuantizerBlock(BlockBehaviour.Properties.of().noOcclusion().strength(ItemBalancing.QUANTIZER_DESTROY_TIME, ItemBalancing.QUANTIZER_EXPLOSION_RESISTANCE).requiresCorrectToolForDrops()),
+            block -> new GenericGeckoBlockItem(block,new Item.Properties().stacksTo(ItemBalancing.STANDARD_STACK_SIZE),MODID,"quantizer", item -> new AnimationController<>(
                     item,
                     state -> {
                         AnimationController<?> controller=state.getController();
                         if (controller.getCurrentAnimation()==null){
                             controller.setAnimation(RawAnimation.begin().then("rotate", Animation.LoopType.LOOP));
                         }
-                        controller.setAnimationSpeed(0.2f);
+                        controller.setAnimationSpeed(ItemBalancing.QUANTIZER_ANIMATION_SPEED);
                         return PlayState.CONTINUE;
                     }
             ))
@@ -158,13 +157,16 @@ public class QuantumCreativity
         QuantizingRegistries.initialize(registrys);
         //transitionals
         registrys.usingCreativeTab("");
-        registrys.createItem("incomplete_quantum_mechanism", new Item.Properties().stacksTo(1));
-        registrys.createBlock("incomplete_schrodingers_box", schrodingerBoxProperties, new Item.Properties().stacksTo(1));
-        registrys.createBlock("semiobserved_schrodingers_box", schrodingerBoxProperties, new Item.Properties().stacksTo(1));
-        registrys.createItem("quantum_ingot_cast",new Item.Properties().stacksTo(1));
+        registrys.createItem("incomplete_quantum_mechanism", new Item.Properties().stacksTo(ItemBalancing.SINGLE_STACK_SIZE));
+        registrys.createBlock("incomplete_schrodingers_box", schrodingerBoxProperties, new Item.Properties().stacksTo(ItemBalancing.SINGLE_STACK_SIZE));
+        registrys.createBlock("semiobserved_schrodingers_box", schrodingerBoxProperties, new Item.Properties().stacksTo(ItemBalancing.SINGLE_STACK_SIZE));
+        registrys.createItem("quantum_ingot_cast",new Item.Properties().stacksTo(ItemBalancing.SINGLE_STACK_SIZE));
         registrys.register(context);
         QuantizingRegistries.register(context);
         LOGGER.info("Mod loading complete");
+        registrys.getBlocks().forEach((k,v) ->
+                System.out.println("BLOCK KEY: " + k)
+        );
     }
 
     public static ResourceLocation asResource(String name){

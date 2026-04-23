@@ -51,6 +51,7 @@ import software.bernie.geckolib.util.GeckoLibUtil;
 import java.util.Objects;
 import java.util.Optional;
 
+@SuppressWarnings("SameReturnValue")
 @Mod.EventBusSubscriber(modid = QuantumCreativity.MODID, bus = Mod.EventBusSubscriber.Bus.MOD)
 public class QuantizerBlockEntity extends BlockEntity implements MenuProvider, WorldlyContainer, GeoBlockEntity {
 
@@ -248,7 +249,7 @@ public class QuantizerBlockEntity extends BlockEntity implements MenuProvider, W
     private static final float ACTIVE_ANIM_SPEED = 1.0f;
 
     private float animSpeed = IDLE_ANIM_SPEED;
-
+    @SuppressWarnings("SameReturnValue")
     protected <E extends QuantizerBlockEntity> PlayState animController(final AnimationState<E> state){
         AnimationController<?> controller=state.getController();
         if (controller.getCurrentAnimation()==null){
@@ -298,9 +299,11 @@ public class QuantizerBlockEntity extends BlockEntity implements MenuProvider, W
         }
 
     }
+    @SuppressWarnings("RedundantMethod")
     private String getModelPath() {
         return "geo/quantizer.geo.json";
     }
+    @SuppressWarnings("SameReturnValue")
     private String getTexturePath() {
         return "textures/block/quantizer.png";
     }

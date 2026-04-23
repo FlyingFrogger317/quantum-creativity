@@ -50,7 +50,7 @@
     }
   },
   "requirements": [
-    ["helmet", "chestplate", "leggings", "boots"]
+    ["helmet"], ["chestplate"], ["leggings"], ["boots"]
   ],
   "rewards": {
     "experience": 47520

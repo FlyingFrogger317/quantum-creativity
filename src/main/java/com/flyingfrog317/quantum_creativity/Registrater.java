@@ -30,7 +30,7 @@ import java.util.function.Supplier;
 
 
 public class Registrater {
-    String MODID;
+    final String MODID;
     Registrater(String modid){
         MODID=modid;
         block_registry = DeferredRegister.create(ForgeRegistries.BLOCKS, MODID);
@@ -167,5 +167,8 @@ public class Registrater {
     }
     public RegistryObject<Block> getRegisteredBlock(String name){
         return blocks.get(name);
+    }
+    public Map<String,RegistryObject<Block>> getBlocks(){
+        return blocks;
     }
 }

@@ -10,26 +10,26 @@ public class QuantumTier implements Tier {
 
     @Override
     public float getSpeed() {
-        return 0;
+        return -2;
     }
 
     @Override
     public float getAttackDamageBonus() {
-        return 0;
+        return -1;
     }
 
     @Override
     public int getLevel() {
-        return 0;
+        return 5;
     }
 
     @Override
     public int getEnchantmentValue() {
-        return 0;
+        return 50;
     }
 
     @Override
     public Ingredient getRepairIngredient() {
-        return null;
+        return Ingredient.of(QuantumCreativity.registrys.getRegisteredItem("quantum_ingot").get());
     }
 }

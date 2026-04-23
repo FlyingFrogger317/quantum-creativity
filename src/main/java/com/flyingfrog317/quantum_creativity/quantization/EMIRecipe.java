@@ -19,7 +19,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class EMIRecipe implements EmiRecipe {
-    QuantizingRecipe recipe;
+    final QuantizingRecipe recipe;
     private final int vxOffset=10;
     private final int vyOffset=10;
     public EMIRecipe(QuantizingRecipe recipe){

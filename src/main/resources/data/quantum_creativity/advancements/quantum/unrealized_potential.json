@@ -1,5 +1,4 @@
 {
-  "parent": "quantum_creativity:quantum/adaptable_frame",
   "display": {
     "icon": {
       "item": "quantum_creativity:blank_smithing_template"
@@ -15,34 +14,21 @@
     "announce_to_chat": true,
     "hidden": true
   },
+  "parent": "quantum_creativity:quantum/adaptable_frame",
   "criteria": {
-    "has_adaptable": {
+    "ach": {
       "trigger": "minecraft:tick",
       "conditions": {
         "player": {
-          "advancements": {
-            "quantum_creativity:quantum/adaptable_frame": true
-          }
-        }
-      }
-    },
-    "has_fragment": {
-      "trigger": "minecraft:tick",
-      "conditions": {
-        "player": {
-          "advancements": {
-            "quantum_creativity:quantum/fragment_of_reality": true
+          "type_specific": {
+            "type": "player",
+            "advancements": {
+              "quantum_creativity:quantum/adaptable_frame": true,
+              "quantum_creativity:quantum/fragment_of_reality": true
+            }
           }
         }
       }
     }
-  },
-  "requirements": [
-    [
-      "has_adaptable"
-    ],
-    [
-      "has_fragment"
-    ]
-  ]
+  }
 }

@@ -3,6 +3,7 @@ package com.flyingfrog317.quantum_creativity;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.world.item.ArmorItem;
 import net.minecraft.world.item.ArmorMaterial;
+import net.minecraft.world.item.ArmorMaterials;
 import net.minecraft.world.item.crafting.Ingredient;
 import org.jetbrains.annotations.Nullable;
 
@@ -24,12 +25,12 @@ public class QuantumArmorMaterial implements ArmorMaterial {
 
     @Override
     public @Nullable SoundEvent getEquipSound() {
-        return null;
+        return ArmorMaterials.NETHERITE.getEquipSound();
     }
 
     @Override
     public @Nullable Ingredient getRepairIngredient() {
-        return null;
+        return Ingredient.of(QuantumCreativity.registrys.getRegisteredItem("quantum_ingot").get());
     }
 
     @Override

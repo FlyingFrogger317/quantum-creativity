@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "minecraft:item/bucket"
+    "layer0": "quantum_creativity:item/liquid_quantum_metal_bucket"
   }
 }

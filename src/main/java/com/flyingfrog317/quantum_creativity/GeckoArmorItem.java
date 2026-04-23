@@ -7,6 +7,7 @@ import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.item.ArmorItem;
 import net.minecraft.world.item.ArmorMaterial;
+import net.minecraft.world.item.Equipable;
 import net.minecraft.world.item.ItemStack;
 import net.minecraftforge.client.extensions.common.IClientItemExtensions;
 import org.jetbrains.annotations.NotNull;
@@ -20,7 +21,7 @@ import software.bernie.geckolib.util.GeckoLibUtil;
 
 import java.util.function.Consumer;
 
-public class GeckoArmorItem extends ArmorItem implements GeoItem {
+public class GeckoArmorItem extends ArmorItem implements GeoItem, Equipable {
     private final String MODID;
     private final String ITEM_NAME;
     private final AnimatableInstanceCache cache = GeckoLibUtil.createInstanceCache(this);
