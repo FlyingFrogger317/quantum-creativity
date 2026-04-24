@@ -40,7 +40,7 @@ public class QuantumCreativity
             new GeckoAxeItem(
                     QUANTUM,
                     ItemBalancing.QUANTUM_AXE_DAMAGE,
-                    ItemBalancing.QUANTUM_AXE_ATTACK_SPEED,
+                    ItemBalancing.QUANTUM_AXE_ATTACK_SPEED + ItemBalancing.ATTACK_SPEED_NORMALIZER,
                     new Item.Properties().rarity(quantumRarity).stacksTo(ItemBalancing.SINGLE_STACK_SIZE).durability(ItemBalancing.QUANTUM_TOOL_DURABILITY),
                     MODID,
                     "quantum_axe"
@@ -50,7 +50,7 @@ public class QuantumCreativity
                 new GeckoPickaxeItem(
                     QUANTUM,
                     ItemBalancing.QUANTUM_PICKAXE_DAMAGE,
-                    ItemBalancing.QUANTUM_PICKAXE_ATTACK_SPEED,
+                    ItemBalancing.QUANTUM_PICKAXE_ATTACK_SPEED + ItemBalancing.ATTACK_SPEED_NORMALIZER,
                     new Item.Properties().rarity(quantumRarity).stacksTo(ItemBalancing.SINGLE_STACK_SIZE).durability(ItemBalancing.QUANTUM_TOOL_DURABILITY),
                     MODID,
                     "quantum_pickaxe"
@@ -60,7 +60,7 @@ public class QuantumCreativity
                 new GeckoSwordItem(
                         QUANTUM,
                         ItemBalancing.QUANTUM_SWORD_DAMAGE,
-                        ItemBalancing.QUANTUM_SWORD_ATTACK_SPEED,
+                        ItemBalancing.QUANTUM_SWORD_ATTACK_SPEED + ItemBalancing.ATTACK_SPEED_NORMALIZER,
                         new Item.Properties().rarity(quantumRarity).stacksTo(ItemBalancing.SINGLE_STACK_SIZE).durability(ItemBalancing.QUANTUM_TOOL_DURABILITY),
                         MODID,
                         "quantum_sword"
@@ -70,13 +70,22 @@ public class QuantumCreativity
                 new GeckoShovelItem(
                         QUANTUM,
                         ItemBalancing.QUANTUM_SHOVEL_DAMAGE,
-                        ItemBalancing.QUANTUM_SHOVEL_ATTACK_SPEED,
+                        ItemBalancing.QUANTUM_SHOVEL_ATTACK_SPEED + ItemBalancing.ATTACK_SPEED_NORMALIZER,
                         new Item.Properties().rarity(quantumRarity).stacksTo(ItemBalancing.SINGLE_STACK_SIZE).durability(ItemBalancing.QUANTUM_TOOL_DURABILITY),
                         MODID,
                         "quantum_shovel"
                 )
         );
-        registrys.createItem("quantum_hoe",new Item.Properties().stacksTo(ItemBalancing.SINGLE_STACK_SIZE));
+        registrys.createRawItem("quantum_hoe",() ->
+                new GeckoHoeItem(
+                        QUANTUM,
+                        ItemBalancing.QUANTUM_HOE_DAMAGE,
+                        ItemBalancing.QUANTUM_HOE_ATTACK_SPEED + ItemBalancing.ATTACK_SPEED_NORMALIZER,
+                        new Item.Properties().rarity(quantumRarity).stacksTo(ItemBalancing.SINGLE_STACK_SIZE).durability(ItemBalancing.QUANTUM_TOOL_DURABILITY),
+                        MODID,
+                        "quantum_hoe"
+                )
+        );
         registrys.createRawItem("quantum_helmet",()->new GeckoArmorItem(
                 ARMOR_QUANTUM,
                 ArmorItem.Type.HELMET,

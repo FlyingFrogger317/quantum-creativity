@@ -1,0 +1,10 @@
+{
+  "replace": false,
+  "values": [
+    "quantum_creativity:quantum_axe",
+    "quantum_creativity:quantum_pickaxe",
+    "quantum_creativity:quantum_shovel",
+    "quantum_creativity:quantum_sword",
+    "quantum_creativity:quantum_hoe"
+  ]
+}

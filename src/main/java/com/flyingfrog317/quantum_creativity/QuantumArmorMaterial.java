@@ -15,7 +15,7 @@ public class QuantumArmorMaterial implements ArmorMaterial {
 
     @Override
     public int getDefenseForType(ArmorItem.Type pType) {
-        return 5;
+        return 10;
     }
 
     @Override

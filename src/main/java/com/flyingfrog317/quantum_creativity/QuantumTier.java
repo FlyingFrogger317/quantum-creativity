@@ -10,7 +10,7 @@ public class QuantumTier implements Tier {
 
     @Override
     public float getSpeed() {
-        return -2;
+        return 100.0f;
     }
 
     @Override

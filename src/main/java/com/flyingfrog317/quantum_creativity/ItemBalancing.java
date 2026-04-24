@@ -4,7 +4,7 @@ public class ItemBalancing {
     public static final int SINGLE_STACK_SIZE = 1;
     public static final int SMALL_STACK_SIZE = 16;
     public static final int STANDARD_STACK_SIZE = 64;
-
+    public static final float ATTACK_SPEED_NORMALIZER = -4f;
     public static final int QUANTUM_TOOL_DURABILITY = 10000;
 
     public static final int QUANTUM_AXE_DAMAGE = 100;
@@ -19,6 +19,9 @@ public class ItemBalancing {
     public static final int QUANTUM_SHOVEL_DAMAGE = 30;
     public static final float QUANTUM_SHOVEL_ATTACK_SPEED = 0.8f;
 
+    public static final int QUANTUM_HOE_DAMAGE = 5;
+    public static final float QUANTUM_HOE_ATTACK_SPEED = 0.5f;
+
     public static final int QUANTUM_COMPONENT_STACK_SIZE = SMALL_STACK_SIZE;
     public static final float DAMAGED_QUANTUM_CASING_DESTROY_TIME = 0.2f;
     public static final float QUANTUM_CASING_DESTROY_TIME = 1f;
@@ -32,4 +35,5 @@ public class ItemBalancing {
 
     public static final float QUANTIZER_DESTROY_TIME = 1.5f;
     public static final float QUANTIZER_EXPLOSION_RESISTANCE = 20f;
+
 }
