@@ -29,8 +29,8 @@ public class QuantizingSerializer implements RecipeSerializer<QuantizingRecipe> 
     public @Nullable QuantizingRecipe fromNetwork(@NotNull ResourceLocation resourceLocation, @NotNull FriendlyByteBuf buf) {
         Ingredient input=Ingredient.fromNetwork(buf);
         int output=buf.readVarInt();
-        NonNullList<Ingredient> outputs=NonNullList.createWithCapacity(output);
-        for (int i=0;i<outputs.size();i++){
+        NonNullList<Ingredient> outputs=NonNullList.create();
+        for (int i=0;i<output;i++){
             outputs.add(Ingredient.fromNetwork(buf));
         }
         return new QuantizingRecipe(resourceLocation,input,outputs);
