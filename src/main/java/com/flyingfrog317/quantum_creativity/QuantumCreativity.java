@@ -169,7 +169,7 @@ public class QuantumCreativity
         registrys.createItem("incomplete_quantum_mechanism", new Item.Properties().stacksTo(ItemBalancing.SINGLE_STACK_SIZE));
         registrys.createBlock("incomplete_schrodingers_box", schrodingerBoxProperties, new Item.Properties().stacksTo(ItemBalancing.SINGLE_STACK_SIZE));
         registrys.createBlock("semiobserved_schrodingers_box", schrodingerBoxProperties, new Item.Properties().stacksTo(ItemBalancing.SINGLE_STACK_SIZE));
-        registrys.createItem("quantum_ingot_cast",new Item.Properties().stacksTo(ItemBalancing.SINGLE_STACK_SIZE));
+        registrys.createGeoItem("quantum_ingot_cast",new Item.Properties().stacksTo(ItemBalancing.SINGLE_STACK_SIZE));
         registrys.register(context);
         QuantizingRegistries.register(context);
         LOGGER.info("Mod loading complete");
