@@ -3,10 +3,7 @@ package com.flyingfrog317.quantum_creativity;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
-import net.minecraft.world.item.BlockItem;
-import net.minecraft.world.item.BucketItem;
-import net.minecraft.world.item.CreativeModeTab;
-import net.minecraft.world.item.Item;
+import net.minecraft.world.item.*;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.LiquidBlock;
 import net.minecraft.world.level.block.state.BlockBehaviour;
@@ -96,8 +93,8 @@ public class Registrater {
         blocks.put(name,regBlock);
         registerItemToCreativeTab(item);
     }
-    public void createCreativeModeTab(String name){
-        creative_mode_tab_registry.register(name,() -> CreativeModeTab.builder().displayItems((itemDisplayParameters, output) -> creativeModeTabs.get(name).forEach(item -> output.accept(item.get()))).title(Component.translatable("itemGroup.quantum_creativity."+name)).build());
+    public void createCreativeModeTab(String name, Supplier<ItemStack> icon){
+        creative_mode_tab_registry.register(name,() -> CreativeModeTab.builder().displayItems((itemDisplayParameters, output) -> creativeModeTabs.get(name).forEach(item -> output.accept(item.get()))).title(Component.translatable("itemGroup.quantum_creativity."+name)).icon(icon).build());
         creativeModeTabs.put(name,new ArrayList<>());
     }
     public void usingCreativeTab(String name){

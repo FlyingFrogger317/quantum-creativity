@@ -8,6 +8,7 @@ import net.minecraft.ChatFormatting;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.ArmorItem;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Rarity;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.state.BlockBehaviour;
@@ -32,7 +33,7 @@ public class QuantumCreativity
     {
         registrys  = new Registrater(MODID);
         Rarity quantumRarity = Rarity.create("QUANTUM",ChatFormatting.BOLD);
-        registrys.createCreativeModeTab("quantum");
+        registrys.createCreativeModeTab("quantum",()->new ItemStack(registrys.getRegisteredItem("quantum_ingot").get()));
         registrys.usingCreativeTab("quantum");
         QuantumTier QUANTUM = new QuantumTier();
         QuantumArmorMaterial ARMOR_QUANTUM = new QuantumArmorMaterial();

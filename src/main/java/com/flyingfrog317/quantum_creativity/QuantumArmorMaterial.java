@@ -1,6 +1,7 @@
 package com.flyingfrog317.quantum_creativity;
 
 import net.minecraft.sounds.SoundEvent;
+import net.minecraft.world.damagesource.CombatRules;
 import net.minecraft.world.item.ArmorItem;
 import net.minecraft.world.item.ArmorMaterial;
 import net.minecraft.world.item.ArmorMaterials;
@@ -15,7 +16,7 @@ public class QuantumArmorMaterial implements ArmorMaterial {
 
     @Override
     public int getDefenseForType(ArmorItem.Type pType) {
-        return 10;
+        return 20;
     }
 
     @Override
