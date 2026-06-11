@@ -1,0 +1,147 @@
+{
+  "type": "create:sequenced_assembly",
+  "ingredient": {
+    "item": "create:brass_sheet"
+  },
+  "transitionalItem": {
+    "item": "quantum_creativity:incomplete_quantum_mechanism"
+  },
+  "sequence": [
+    {
+      "type": "create:deploying",
+      "ingredients": [
+        {
+          "item": "quantum_creativity:incomplete_quantum_mechanism"
+        },
+        {
+          "item": "quantum_creativity:quantum_storage_component"
+        }
+      ],
+      "results": [
+        {
+          "item": "quantum_creativity:incomplete_quantum_mechanism"
+        }
+      ]
+    },
+    {
+      "type": "create:deploying",
+      "ingredients": [
+        {
+          "item": "quantum_creativity:incomplete_quantum_mechanism"
+        },
+        {
+          "item": "quantum_creativity:quantum_bubble"
+        }
+      ],
+      "results": [
+        {
+          "item": "quantum_creativity:incomplete_quantum_mechanism"
+        }
+      ]
+    },
+    {
+      "type": "create:deploying",
+      "ingredients": [
+        {
+          "item": "quantum_creativity:incomplete_quantum_mechanism"
+        },
+        {
+          "item": "quantum_creativity:hardened_metal"
+        }
+      ],
+      "results": [
+        {
+          "item": "quantum_creativity:incomplete_quantum_mechanism"
+        }
+      ]
+    },
+    {
+      "type": "create:deploying",
+      "ingredients": [
+        {
+          "item": "quantum_creativity:incomplete_quantum_mechanism"
+        },
+        {
+          "item": "quantum_creativity:quantized_magnet"
+        }
+      ],
+      "results": [
+        {
+          "item": "quantum_creativity:incomplete_quantum_mechanism"
+        }
+      ]
+    },
+    {
+      "type": "create:deploying",
+      "ingredients": [
+        {
+          "item": "quantum_creativity:incomplete_quantum_mechanism"
+        },
+        {
+          "item": "quantum_creativity:aquatic_trinket"
+        }
+      ],
+      "results": [
+        {
+          "item": "quantum_creativity:incomplete_quantum_mechanism"
+        }
+      ]
+    },
+    {
+      "type": "create:deploying",
+      "ingredients": [
+        {
+          "item": "quantum_creativity:incomplete_quantum_mechanism"
+        },
+        {
+          "item": "quantum_creativity:crystallized_experience"
+        }
+      ],
+      "results": [
+        {
+          "item": "quantum_creativity:incomplete_quantum_mechanism"
+        }
+      ]
+    },
+    {
+      "type": "create:deploying",
+      "ingredients": [
+        {
+          "item": "quantum_creativity:incomplete_quantum_mechanism"
+        },
+        {
+          "item": "quantum_creativity:bottle_o_energy"
+        }
+      ],
+      "results": [
+        {
+          "item": "quantum_creativity:incomplete_quantum_mechanism"
+        }
+      ]
+    },
+    {
+      "type": "create:deploying",
+      "ingredients": [
+        {
+          "item": "quantum_creativity:incomplete_quantum_mechanism"
+        },
+        {
+          "item": "quantum_creativity:quantum_casing"
+        }
+      ],
+      "results": [
+        {
+          "item": "quantum_creativity:incomplete_quantum_mechanism"
+        }
+      ]
+    }
+  ],
+  "results": [
+    {
+      "item": "quantum_creativity:quantum_mechanism",
+      "count": 1,
+      "chance": 1.0
+    }
+  ],
+  "loops": 1
+}

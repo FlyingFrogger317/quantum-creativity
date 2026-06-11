@@ -1,0 +1,13 @@
+{
+  "entries": [
+    {
+      "enum": "net/minecraft/world/item/Rarity",
+      "name": "QUANTUM",
+      "constructor": "(ILjava/lang/String;Ljava/util/function/UnaryOperator;)V",
+      "parameters": {
+        "class": "com/flyingfrog317/quantum_creativity/QuantumCreativity",
+        "field": "QUANTUM_RARITY_PROXY"
+      }
+    }
+  ]
+}

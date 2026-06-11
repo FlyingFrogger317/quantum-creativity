@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:smithing_transform",
+  "template": {
+    "item": "quantum_creativity:quantum_upgrade_template"
+  },
+  "base": {
+    "tag": "quantum_creativity:quantum_upgradable_axe"
+  },
+  "addition": {
+    "item": "quantum_creativity:block_of_quantum_ingot"
+  },
+  "result": {
+    "item": "quantum_creativity:quantum_axe"
+  }
+}

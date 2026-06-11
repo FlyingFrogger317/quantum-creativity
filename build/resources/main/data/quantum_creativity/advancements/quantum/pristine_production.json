@@ -1,0 +1,30 @@
+{
+  "parent": "quantum_creativity:quantum/unnatural_components",
+  "display": {
+    "icon": {
+      "item": "quantum_creativity:quantum_storage_component"
+    },
+    "title": {
+      "translate": "advancement.quantum.pristine_production.title"
+    },
+    "description": {
+      "translate": "advancement.quantum.pristine_production.description"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "crafted_tag": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "tag": "quantum_creativity:quantum_mechanism_highquality_component"
+          }
+        ]
+      }
+    }
+  }
+}

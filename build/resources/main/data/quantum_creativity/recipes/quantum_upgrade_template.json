@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "#S#",
+    "#C#",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:diamond_block"
+    },
+    "S": {
+      "item": "quantum_creativity:blank_smithing_template"
+    },
+    "C": {
+      "item": "quantum_creativity:block_of_quantum_ingot"
+    }
+  },
+  "result": {
+    "item": "quantum_creativity:quantum_upgrade_template"
+  }
+}

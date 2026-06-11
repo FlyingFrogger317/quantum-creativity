@@ -1,0 +1,37 @@
+{
+  "display": {
+    "icon": {
+      "item": "quantum_creativity:quantum_ingot"
+    },
+    "title": {
+      "translate": "advancement.quantum.root.title"
+    },
+    "description": {
+      "translate": "advancement.quantum.root.description"
+    },
+    "frame": "task",
+    "show_toast": false,
+    "announce_to_chat": false,
+    "hidden": false,
+    "background": "quantum_creativity:textures/gui/advancements/backgrounds/quantum.png"
+  },
+  "criteria": {
+    "has_items": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:netherite_scrap"
+            ]
+          },
+          {
+            "items": [
+              "create:precision_mechanism"
+            ]
+          }
+        ]
+      }
+    }
+  }
+}

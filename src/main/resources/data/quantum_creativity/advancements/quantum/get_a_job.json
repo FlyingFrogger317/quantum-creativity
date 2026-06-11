@@ -1,0 +1,32 @@
+{
+  "parent": "quantum_creativity:quantum/quantum_infusion",
+  "display": {
+    "icon": {
+      "item": "quantum_creativity:quantum_hoe"
+    },
+    "title": {
+      "translate": "advancement.quantum.get_a_job.title"
+    },
+    "description": {
+      "translate": "advancement.quantum.get_a_job.description"
+    },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": true
+  },
+  "criteria": {
+    "has_hoe": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "quantum_creativity:quantum_hoe"
+            ]
+          }
+        ]
+      }
+    }
+  }
+}

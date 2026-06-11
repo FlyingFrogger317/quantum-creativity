@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    { "item": "quantum_creativity:damaged_bottle_o_energy" },
+    { "item": "quantum_creativity:damaged_bottle_o_energy" },
+    { "item": "quantum_creativity:damaged_bottle_o_energy" }
+  ],
+  "result": {
+    "item": "quantum_creativity:bottle_o_energy",
+    "count": 2
+  }
+}

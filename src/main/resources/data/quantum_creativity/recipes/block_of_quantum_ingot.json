@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "###",
+    "###",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "quantum_creativity:quantum_ingot"
+    }
+  },
+  "result": {
+    "item": "quantum_creativity:block_of_quantum_ingot"
+  }
+}

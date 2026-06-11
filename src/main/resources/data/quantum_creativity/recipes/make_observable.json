@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "quantum_creativity:unobserved_schrodingers_box"
+    }
+  ],
+  "result": {
+    "item": "quantum_creativity:observable_schrodingers_box"
+  }
+}

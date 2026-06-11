@@ -1,0 +1,35 @@
+{
+  "parent": "quantum_creativity:quantum/machinery_of_existence",
+  "display": {
+    "icon": {
+      "item": "quantum_creativity:quantum_ingot"
+    },
+    "title": {
+      "translate": "advancement.quantum.fragment_of_reality.title"
+    },
+    "description": {
+      "translate": "advancement.quantum.fragment_of_reality.description"
+    },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "crafted": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "quantum_creativity:quantum_ingot"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "rewards": {
+    "experience": 1395
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "display": {
+    "icon": {
+      "item": "quantum_creativity:blank_smithing_template"
+    },
+    "title": {
+      "translate": "advancement.quantum.unrealized_potential.title"
+    },
+    "description": {
+      "translate": "advancement.quantum.unrealized_potential.description"
+    },
+    "frame": "goal",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": true
+  },
+  "parent": "quantum_creativity:quantum/adaptable_frame",
+  "criteria": {
+    "ach": {
+      "trigger": "minecraft:tick",
+      "conditions": {
+        "player": {
+          "type_specific": {
+            "type": "player",
+            "advancements": {
+              "quantum_creativity:quantum/adaptable_frame": true,
+              "quantum_creativity:quantum/fragment_of_reality": true
+            }
+          }
+        }
+      }
+    }
+  }
+}

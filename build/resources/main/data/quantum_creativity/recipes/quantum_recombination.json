@@ -1,0 +1,23 @@
+{
+  "type": "create:mixing",
+  "ingredients": [
+    {
+      "tag": "quantum_creativity:quantum_mechanism_lowquality_component"
+    },
+    {
+      "item": "quantum_creativity:unobserved_schrodingers_box"
+    }
+  ],
+  "results": [
+    {
+      "item": "quantum_creativity:observed_schrodingers_box"
+    },
+    {
+      "item": "quantum_creativity:observable_schrodingers_box"
+    },
+    {
+      "item": "quantum_creativity:observable_schrodingers_box",
+      "chance": 0.1
+    }
+  ]
+}

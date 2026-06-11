@@ -1,0 +1,27 @@
+{
+  "type": "create:mechanical_crafting",
+  "pattern": [
+    "#GGG#",
+    "G L G",
+    "G S G",
+    "G L G",
+    "#GGG#"
+  ],
+  "key": {
+    "#": {
+      "item": "create:sturdy_sheet"
+    },
+    "S": {
+      "item": "quantum_creativity:observed_schrodingers_box"
+    },
+    "G": {
+      "item": "minecraft:light_blue_stained_glass_pane"
+    },
+    "L": {
+      "item": "minecraft:lightning_rod"
+    }
+  },
+  "result": {
+    "item": "quantum_creativity:quantizer"
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "type": "quantum_creativity:quantizing",
+  "input" : {
+    "item":"quantum_creativity:observed_schrodingers_box"
+  },
+  "outputs": [
+    { "item": "quantum_creativity:damaged_aquatic_trinket"},
+    { "item": "quantum_creativity:damaged_bottle_o_energy"},
+    { "item": "quantum_creativity:damaged_crystallized_experience"},
+    { "item": "quantum_creativity:damaged_hardened_metal"},
+    { "item": "quantum_creativity:damaged_quantized_magnet"},
+    { "item": "quantum_creativity:damaged_quantum_bubble"},
+    { "item": "quantum_creativity:damaged_quantum_casing"},
+    { "item": "quantum_creativity:damaged_quantum_storage_component"}
+  ]
+}

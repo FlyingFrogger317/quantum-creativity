@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    { "item": "quantum_creativity:damaged_quantum_casing" },
+    { "item": "quantum_creativity:damaged_quantum_casing" },
+    { "item": "quantum_creativity:damaged_quantum_casing" }
+  ],
+  "result": {
+    "item": "quantum_creativity:quantum_casing",
+    "count": 2
+  }
+}

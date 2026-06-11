@@ -1,0 +1,380 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="29b848a8-08ce-4e9a-999d-3b67b15490ff" name="Changes" comment="Fix #2 and #3">
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gradle.properties" beforeDir="false" afterPath="$PROJECT_DIR$/gradle.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/settings.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/settings.gradle" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="EmbeddingIndexingInfo">
+    <option name="cachedIndexableFilesCount" value="256" />
+    <option name="fileBasedEmbeddingIndicesEnabled" value="true" />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <task path="$PROJECT_DIR$">
+          <activation />
+        </task>
+        <projects_view>
+          <tree_state>
+            <expand />
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+        <option value="Interface" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/src/main/java/com/flyingfrog317/quantum_creativity/QuantumCreativity.java" root0="FORCE_HIGHLIGHTING" />
+  </component>
+  <component name="McpProjectServerCommands">
+    <commands />
+    <urls />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 3
+}</component>
+  <component name="ProjectId" id="3BobDYdWtgeu4Osh3ZWyTvMihUK" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.runClient.executor": "Run",
+    "Application.runData.executor": "Run",
+    "Gradle./home/anthony/programming/personal/quantum-creativity [:prepareRunClientCompile].executor": "Run",
+    "Gradle./home/anthony/programming/personal/quantum-creativity [createMcpToSrg].executor": "Run",
+    "Gradle.Build quantum-creativity.executor": "Run",
+    "Gradle.Download Sources.executor": "Run",
+    "Gradle.quantum-creativity [:cpw.mods.bootstraplauncher.BootstrapLauncher.main()].executor": "Run",
+    "Gradle.quantum-creativity [:prepareRunClientCompile].executor": "Run",
+    "Gradle.quantum-creativity [:prepareRunDataCompile].executor": "Run",
+    "Gradle.quantum-creativity [:prepareRunGameTestServerCompile].executor": "Run",
+    "Gradle.quantum-creativity [:prepareRunServerCompile].executor": "Run",
+    "Gradle.quantum-creativity [clean].executor": "Run",
+    "Gradle.quantum-creativity [createMcpToSrg].executor": "Run",
+    "Gradle.quantum-creativity [genIntellijRuns].executor": "Run",
+    "Gradle.quantum-creativity [publish].executor": "Run",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.MCP Project settings loaded": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "Rebasing 1.20.1-neoforge-dev",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "/home/anthony/programming/personal/quantum-creativity",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "run.code.analysis.last.selected.profile": "pProject Default",
+    "settings.editor.selected.configurable": "vcs.Git"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/resources/assets/quantum_creativity/textures/gui/advancements/backgrounds" />
+      <recent name="$PROJECT_DIR$/src/main/resources/assets/quantum_creativity/models/item" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/resources/assets/quantum_creativity/geo" />
+      <recent name="$PROJECT_DIR$/src/main/resources/assets/quantum_creativity/textures/armor" />
+      <recent name="$PROJECT_DIR$/src/main/resources/assets/quantum_creativity/textures/models/armor" />
+      <recent name="$PROJECT_DIR$/src/main/resources/assets/quantum_creativity/textures/item" />
+      <recent name="$PROJECT_DIR$/src/main/resources/data/quantum_creativity/" />
+    </key>
+    <key name="ExtractSuperBase.RECENT_KEYS">
+      <recent name="com.flyingfrog317.quantum_creativity" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.flyingfrog317.quantum_creativity" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Gradle.quantum-creativity [genIntellijRuns]">
+    <configuration name="Client" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="net.neoforged.devlaunch.Main" />
+      <module name="quantum-creativity.main" />
+      <option name="PROGRAM_PARAMETERS" value="@$PROJECT_DIR$/build/moddev/clientRunProgramArgs.txt" />
+      <option name="VM_PARAMETERS" value="@$PROJECT_DIR$/build/moddev/clientRunVmArgs.txt -Dfml.modFolders=quantum_creativity%%$PROJECT_DIR$/build/classes/java/main:quantum_creativity%%$PROJECT_DIR$/build/resources/main" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/run" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Data" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="net.neoforged.devlaunch.Main" />
+      <module name="quantum-creativity.main" />
+      <option name="PROGRAM_PARAMETERS" value="@$PROJECT_DIR$/build/moddev/dataRunProgramArgs.txt" />
+      <option name="VM_PARAMETERS" value="@$PROJECT_DIR$/build/moddev/dataRunVmArgs.txt -Dfml.modFolders=quantum_creativity%%$PROJECT_DIR$/build/classes/java/main:quantum_creativity%%$PROJECT_DIR$/build/resources/main" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/run" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="GameTestServer" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="net.neoforged.devlaunch.Main" />
+      <module name="quantum-creativity.main" />
+      <option name="PROGRAM_PARAMETERS" value="@$PROJECT_DIR$/build/moddev/gameTestServerRunProgramArgs.txt" />
+      <option name="VM_PARAMETERS" value="@$PROJECT_DIR$/build/moddev/gameTestServerRunVmArgs.txt -Dfml.modFolders=quantum_creativity%%$PROJECT_DIR$/build/classes/java/main:quantum_creativity%%$PROJECT_DIR$/build/resources/main" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/run" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Server" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="net.neoforged.devlaunch.Main" />
+      <module name="quantum-creativity.main" />
+      <option name="PROGRAM_PARAMETERS" value="@$PROJECT_DIR$/build/moddev/serverRunProgramArgs.txt" />
+      <option name="VM_PARAMETERS" value="@$PROJECT_DIR$/build/moddev/serverRunVmArgs.txt -Dfml.modFolders=quantum_creativity%%$PROJECT_DIR$/build/classes/java/main:quantum_creativity%%$PROJECT_DIR$/build/resources/main" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/run" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="quantum-creativity [clean]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="clean" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>false</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <configuration name="quantum-creativity [genIntellijRuns]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="genIntellijRuns" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>false</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <configuration name="quantum-creativity [publish]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="publish" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>false</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="JetRunConfigurationType">
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <option name="filePath" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Gradle.quantum-creativity [genIntellijRuns]" />
+        <item itemvalue="Gradle.quantum-creativity [publish]" />
+        <item itemvalue="Gradle.quantum-creativity [clean]" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="29b848a8-08ce-4e9a-999d-3b67b15490ff" name="Changes" comment="" />
+      <created>1775158252285</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1775158252285</updated>
+    </task>
+    <task id="LOCAL-00001" summary="initial commit">
+      <option name="closed" value="true" />
+      <created>1776411603143</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1776411603143</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Armor upgrades, advancements, EMI, recipes, armor fixes, warning cleaning and bugfixes">
+      <option name="closed" value="true" />
+      <created>1776858848096</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1776858848096</updated>
+    </task>
+    <task id="LOCAL-00003" summary="uncommited warning fixes">
+      <option name="closed" value="true" />
+      <created>1776859592681</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1776859592681</updated>
+    </task>
+    <task id="LOCAL-00004" summary="deleting as these have been integrated into GeoExt_WireframeGeoModel">
+      <option name="closed" value="true" />
+      <created>1776859782864</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1776859782864</updated>
+    </task>
+    <task id="LOCAL-00005" summary="warning squashing">
+      <option name="closed" value="true" />
+      <created>1776860877664</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1776860877664</updated>
+    </task>
+    <task id="LOCAL-00006" summary="final release edits and bugfixes, waiting on quantum hoe model then ready for release">
+      <option name="closed" value="true" />
+      <created>1776922435853</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1776922435853</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Impl hoe, waiting on model&#10;also impl tags&#10;HOE DONE YAY&#10;RELEASE TIMEEEEEEEEEEEEEEEEE">
+      <option name="closed" value="true" />
+      <created>1777003242598</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1777003242598</updated>
+    </task>
+    <task id="LOCAL-00008" summary="multiplayer bugfix">
+      <option name="closed" value="true" />
+      <created>1777016616150</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1777016616150</updated>
+    </task>
+    <task id="LOCAL-00009" summary="markdown to readme">
+      <option name="closed" value="true" />
+      <created>1777016645171</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1777016645171</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Fix #2 and #3">
+      <option name="closed" value="true" />
+      <created>1777535639568</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1777535639568</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
+    <servers />
+  </component>
+  <component name="UnknownFeatures">
+    <option featureType="dependencySupport" implementationName="executable:docker" />
+    <option featureType="dependencySupport" implementationName="java:org.spongepowered:mixin" />
+    <option featureType="dependencySupport" implementationName="java:net.minecraftforge:forge" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="1.20.1-forge-dev" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="initial commit" />
+    <MESSAGE value="Armor upgrades, advancements, EMI, recipes, armor fixes, and bugfixes" />
+    <MESSAGE value="Armor upgrades, advancements, EMI, recipes, armor fixes, warning cleaning and bugfixes" />
+    <MESSAGE value="uncommited warning fixes" />
+    <MESSAGE value="deleting as these have been integrated into GeoExt_WireframeGeoModel" />
+    <MESSAGE value="warning squashing" />
+    <MESSAGE value="final release edits and bugfixes, waiting on quantum hoe model then ready for release" />
+    <MESSAGE value="Impl hoe, waiting on model&#10;also impl tags&#10;HOE DONE YAY&#10;RELEASE TIMEEEEEEEEEEEEEEEEE" />
+    <MESSAGE value="multiplayer bugfix" />
+    <MESSAGE value="markdown to readme" />
+    <MESSAGE value="Fix #2 and #3" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fix #2 and #3" />
+  </component>
+</project>

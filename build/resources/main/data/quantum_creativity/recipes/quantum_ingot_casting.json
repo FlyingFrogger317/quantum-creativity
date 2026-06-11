@@ -1,0 +1,62 @@
+{
+  "type": "create:sequenced_assembly",
+  "ingredient":{
+    "item": "minecraft:iron_block"
+  },
+  "transitionalItem": {
+    "item": "quantum_creativity:quantum_ingot_cast"
+  },
+  "sequence": [
+    {
+      "type": "create:cutting",
+      "processingTime": 20,
+      "ingredients": [
+        {
+          "item": "quantum_creativity:quantum_ingot_cast"
+        }
+      ],
+      "results": [
+        {
+          "item": "quantum_creativity:quantum_ingot_cast"
+        }
+      ]
+    },
+    {
+      "type": "create:filling",
+      "ingredients": [
+        {
+          "fluid": "quantum_creativity:liquid_quantum_metal",
+          "amount": 90
+        },
+        {
+          "item": "quantum_creativity:quantum_ingot_cast"
+        }
+      ],
+      "results": [
+        {
+          "item": "quantum_creativity:quantum_ingot_cast"
+        }
+      ]
+    },
+    {
+      "type": "create:cutting",
+      "processingTime": 20,
+      "ingredients": [
+        {
+          "item": "quantum_creativity:quantum_ingot_cast"
+        }
+      ],
+      "results": [
+        {
+          "item": "quantum_creativity:quantum_ingot_cast"
+        }
+      ]
+    }
+  ],
+  "results": [
+    {
+      "item": "quantum_creativity:quantum_ingot"
+    }
+  ],
+  "loops": 1
+}

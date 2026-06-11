@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    { "item": "quantum_creativity:damaged_aquatic_trinket" },
+    { "item": "quantum_creativity:damaged_aquatic_trinket" },
+    { "item": "quantum_creativity:damaged_aquatic_trinket" }
+  ],
+  "result": {
+    "item": "quantum_creativity:aquatic_trinket",
+    "count": 2
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "type": "create:mixing",
+  "ingredients": [
+    {
+      "fluid": "minecraft:lava",
+      "amount": 1000
+    },
+    {
+      "item": "quantum_creativity:quantum_mechanism"
+    }
+  ],
+  "results": [
+    {
+      "fluid": "quantum_creativity:liquid_quantum_metal",
+      "amount": 90
+    }
+  ],
+  "heatRequirement": "superheated"
+}

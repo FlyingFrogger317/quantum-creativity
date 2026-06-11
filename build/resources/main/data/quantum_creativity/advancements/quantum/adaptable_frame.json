@@ -1,0 +1,32 @@
+{
+  "parent": "quantum_creativity:quantum/quantum_collapse",
+  "display": {
+    "icon": {
+      "item": "quantum_creativity:blank_smithing_template"
+    },
+    "title": {
+      "translate": "advancement.quantum.adaptable_frame.title"
+    },
+    "description": {
+      "translate": "advancement.quantum.adaptable_frame.description"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "crafted": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "quantum_creativity:blank_smithing_template"
+            ]
+          }
+        ]
+      }
+    }
+  }
+}

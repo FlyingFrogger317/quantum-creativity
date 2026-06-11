@@ -1,0 +1,14 @@
+{
+  "type": "quantum_creativity:quantizing",
+  "input": {
+    "tag": "minecraft:trim_templates"
+  },
+  "outputs": [
+    {
+      "tag": "minecraft:trim_templates"
+    },
+    {
+      "item": "quantum_creativity:blank_smithing_template"
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    { "item": "quantum_creativity:damaged_hardened_metal" },
+    { "item": "quantum_creativity:damaged_hardened_metal" },
+    { "item": "quantum_creativity:damaged_hardened_metal" }
+  ],
+  "result": {
+    "item": "quantum_creativity:hardened_metal",
+    "count": 2
+  }
+}
